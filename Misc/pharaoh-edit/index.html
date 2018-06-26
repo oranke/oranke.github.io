@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pharaoh level editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+</head>
+<body>
+    <div id="page-wrapper">
+
+        <header id="main-header">
+             <!-- 여긴 헤더야!! 아하하!! -->
+            <hgroup>
+                <h1>Pharaoh level editor</h1>
+                <!--
+                <h2 class="master-description">오랑캐꽃</h2>
+                -->
+                <div id='spinner'></div>
+                <div id="status">Downloading...</div>
+                <progress value="0" max="100" id="progress" hidden=1></progress>
+            </hgroup>
+        </header>
+
+        <div id="main-content">
+            <!-- 여기가 본문 -->
+
+            <div id="buttons-area">
+                <!--
+                버튼영역이야! <br>
+                블럭 추가 <br>
+                -->
+                <hr class="seperator">
+
+                <label for="rd-play" class="full-rd">Play</label> 
+                <input type="radio" name="plate-work" id="rd-play"> <br>
+
+                <label for="rd-PH" class="half-rd">PH</label> 
+                <input type="radio" name="plate-work" id="rd-PH"> <br>
+                <label for="rd-V2" class="half-rd">V2</label>
+                <input type="radio" name="plate-work" id="rd-V2">
+                <label for="rd-V3" class="half-rd">V3</label>
+                <input type="radio" name="plate-work" id="rd-V3">                
+                <label for="rd-H2" class="half-rd">H2</label>
+                <input type="radio" name="plate-work" id="rd-H2">                
+                <label for="rd-H3" class="half-rd">H3</label>
+                <input type="radio" name="plate-work" id="rd-H3"> <br> 
+
+                <label for="rd-delete" class="full-rd">Delete</label>
+                <input type="radio" name="plate-work" id="rd-delete"> <br> 
+
+                <hr class="seperator">
+                <button id="solve" class="full-btn">Solve</button> <br>
+
+                <hr class="seperator">
+                <button id="export" class="full-btn">Export</button>
+                <button id="import" class="full-btn">Import</button>
+
+                <hr class="seperator">
+                <button id="test" class="full-btn">Test</button>
+                <hr class="seperator">
+                
+            </div>
+
+            <div id="view-area">
+                <!--
+                표시영역이다!
+                -->
+                <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+            </div>
+        
+
+        </div>
+    
+
+        <footer id = "main-footer">
+           <!-- 바닥글!-->
+            <a href="#">created by oranke!</a>
+        </footer>
+
+
+    </div>
+
+
+
+    <div id="dialog-box" class="hidden" title="">
+        <br>
+        <p>
+        <!--
+          <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        -->
+        <b>Let me think...</b>
+        </p>
+    </div>
+
+
+    <script src="jquery-ui/jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+
+
+    <script>
+        /*
+        $( function() {
+            $( "input" ).checkboxradio({
+            icon: false
+            });
+        } );
+        */
+        $( function() {
+            // 라디오버튼 초기화
+            $("input").checkboxradio({
+                icon: false
+            }).click(function (event) {
+                console.log(event.target.id); 
+                //console.log('ahaha')
+            });
+            // play 버튼은 누른 채 시작. 
+            // https://stackoverflow.com/questions/3759088/jquery-ui-radio-button-how-to-correctly-switch-checked-state
+            $("#rd-play").prop('checked', true).button("refresh");
+
+            // 다이얼로그 초기화
+            $("#dialog-box" ).dialog({
+                autoOpen: false,
+                modal: true,
+                closeOnEscape: false,
+                maxHeight: 100,
+                height: 100,
+                draggable: false,
+                resizable: false,
+
+                /*
+                //dialogClass: "no-titlebar",
+                show: {
+                    //effect: "blind",
+                    effect: "fade",
+                    duration: 300
+                },
+                hide: {
+                    //effect: "explode",
+                    effect: "fade",
+                    duration: 300
+                },
+                */
+                show: "fade",
+                hide: "fade",
+
+                open: function(event, ui) {
+                    //$(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
+                    //$(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
+                    $(".ui-dialog-titlebar").hide();
+                    //$('.ui-widget-overlay', this).hide().fadeIn(200);
+                    $('.ui-widget-overlay').hide().fadeIn();
+
+
+
+                    //setTimeout("$('#dialog-message').dialog('close')",3000);
+                    setTimeout(function () {
+                        /*
+                        $("#dialog-box").fadeOut(function() {
+                            $('.ui-widget-overlay').fadeOut();    
+                            $("#dialog-box").dialog('close');    
+                        })
+                        */
+                        /*
+                        $('.ui-widget-overlay').fadeOut();
+
+                        $("#dialog-box").dialog('close');
+                        */
+
+                        /* // 후보 1
+                        $('.ui-widget-overlay').fadeOut(
+                            function() {
+                                $("#dialog-box").dialog('close');
+                            }
+                        );
+                        // */
+
+                        //$("#dialog-box").dialog().fadeOut(); 
+
+                        $("#dialog-box").dialog('close');
+                        //$(this).dialog('close');
+
+                        //console.log('start close');
+                        //$(".ui-dialog-titlebar").show();
+                    }, 1500);
+                },
+                
+                beforeClose: function(event, ui) {
+                    // modal 옵션을 꺼서 오버레이가 닫히지 않게 하고
+                    $("#dialog-box").dialog('option', 'modal', false);
+                    $(document).off( 'focusin' ).off( 'focusin' );
+                    // 오버레이에 직접 페이드아웃을 건다
+                    $('.ui-widget-overlay').fadeOut(function () {
+                        //console.log('fade out');
+                        // 다이얼로그 정리에 준하는 처리를 해준다. 
+                        $("#dialog-box").dialog('option', 'modal', true);
+                        $('.ui-widget-overlay').remove();
+                        var overlays = $(document).data( "ui-dialog-overlays" ) - 1;
+                        if ( !overlays ) {
+                            $(document).removeData( "ui-dialog-overlays")
+                            //$(document).off( 'focusin' ).off( 'focusin' );
+                        } else {
+                            $(document).data( "ui-dialog-overlays", overlays );
+                        }
+                    }); 
+
+                },
+
+                close: function(event, ui) {
+                    //$(".ui-dialog-titlebar").show();
+                    //$('.ui-widget-overlay').show()//.fadeOut();
+                    //console.log('close');
+                    //$('.ui-widget-overlay').show();
+                    //$("#dialog-box").dialog('option', 'modal', true);
+
+                }
+
+                /*
+                modal: true,
+                buttons: {
+                    Ok: function() {
+                    $( this ).dialog( "close" );
+                    }
+                }
+                */
+            });            
+            
+            // 풀이버튼 동작
+            $("#solve").button().click(function() {
+                $(".ui-dialog-titlebar").hide();
+                $("#dialog-box" ).dialog('open'); 
+            }); 
+
+            // 출력 버튼 초기화
+            $("#export").button().click(function() {
+                /*
+                $("#effect" ).dialog({
+
+                }).show(
+                    "Drop", {}, function () {
+                        //$( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+
+                    }
+                );
+                */
+
+            }); 
+
+            // 입력 버튼 초기화
+            $("#import").button().click(function() {
+
+            });
+
+
+            // 테스트 버튼 초기화
+            $("#test").button().click(function() {
+                //alert ('test');
+                //document.getElementById('canvas').setAttribute("style","width:600px");
+
+            });
+
+            /*
+            */
+        } );
+    </script>
+
+    <script type='text/javascript'>
+        var statusElement = document.getElementById('status');
+        var progressElement = document.getElementById('progress');
+        var spinnerElement = document.getElementById('spinner');
+
+        window.addEventListener('resize', function(e) {
+            //console.log(e); 
+            //console.log(Module.canvas.clientWidth);
+            //console.log(Module.canvas.clientHeight);
+            Browser.setCanvasSize(Module.canvas.clientWidth, Module.canvas.clientHeight);
+        });
+
+        var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+            var element = document.getElementById('output');
+            if (element) element.value = ''; // clear browser cache
+            return function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            // These replacements are necessary if you render to raw HTML
+            //text = text.replace(/&/g, "&amp;");
+            //text = text.replace(/</g, "&lt;");
+            //text = text.replace(/>/g, "&gt;");
+            //text = text.replace('\n', '<br>', 'g');
+            console.log(text);
+            if (element) {
+                element.value += text + "\n";
+                element.scrollTop = element.scrollHeight; // focus on bottom
+            }
+            };
+        })(),
+        printErr: function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            if (0) { // XXX disabled for safety typeof dump == 'function') {
+            dump(text + '\n'); // fast, straight to the real console
+            } else {
+            console.error(text);
+            }
+        },
+        canvas: (function() {
+            var canvas = document.getElementById('canvas');
+
+            // As a default initial behavior, pop up an alert when webgl context is lost. To make your
+            // application robust, you may want to override this behavior before shipping!
+            // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+            canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+
+
+            return canvas;
+        })(),
+        setStatus: function(text) {
+            if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+            if (text === Module.setStatus.text) return;
+            var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+            var now = Date.now();
+            if (m && now - Date.now() < 30) return; // if this is a progress update, skip it if too soon
+            if (m) {
+            text = m[1];
+            progressElement.value = parseInt(m[2])*100;
+            progressElement.max = parseInt(m[4])*100;
+            progressElement.hidden = false;
+            spinnerElement.hidden = false;
+            } else {
+            progressElement.value = null;
+            progressElement.max = null;
+            progressElement.hidden = true;
+            if (!text) spinnerElement.style.display = 'none';
+            }
+            statusElement.innerHTML = text;
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+            this.totalDependencies = Math.max(this.totalDependencies, left);
+            Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+        }
+        };
+        Module.setStatus('Downloading...');
+        window.onerror = function(event) {
+        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+        Module.setStatus('Exception thrown, see JavaScript console');
+        spinnerElement.style.display = 'none';
+        Module.setStatus = function(text) {
+            if (text) Module.printErr('[post-exception status] ' + text);
+        };
+        };
+    </script>    
+
+    <script async type="text/javascript" src="pharaoh.js"></script>
+</body>
+</html>
