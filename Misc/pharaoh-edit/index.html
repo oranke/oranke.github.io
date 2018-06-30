@@ -35,21 +35,21 @@
                 <hr class="seperator">
 
                 <label for="rd-play" class="full-rd">Play</label> 
-                <input type="radio" name="plate-work" id="rd-play"> <br>
+                <input class="rb" type="radio" name="plate-work" id="rd-play"> <br>
 
                 <label for="rd-PH" class="half-rd">PH</label> 
-                <input type="radio" name="plate-work" id="rd-PH"> <br>
+                <input class="rb" type="radio" name="plate-work" id="rd-PH"> <br>
                 <label for="rd-V2" class="half-rd">V2</label>
-                <input type="radio" name="plate-work" id="rd-V2">
+                <input class="rb" type="radio" name="plate-work" id="rd-V2">
                 <label for="rd-V3" class="half-rd">V3</label>
-                <input type="radio" name="plate-work" id="rd-V3">                
+                <input class="rb" type="radio" name="plate-work" id="rd-V3">                
                 <label for="rd-H2" class="half-rd">H2</label>
-                <input type="radio" name="plate-work" id="rd-H2">                
+                <input class="rb" type="radio" name="plate-work" id="rd-H2">                
                 <label for="rd-H3" class="half-rd">H3</label>
-                <input type="radio" name="plate-work" id="rd-H3"> <br> 
+                <input class="rb" type="radio" name="plate-work" id="rd-H3"> <br> 
 
                 <label for="rd-delete" class="full-rd">Delete</label>
-                <input type="radio" name="plate-work" id="rd-delete"> <br> 
+                <input class="rb" type="radio" name="plate-work" id="rd-delete"> <br> 
 
                 <hr class="seperator">
                 <button id="solve" class="full-btn">Solve</button> <br>
@@ -69,6 +69,9 @@
                 표시영역이다!
                 -->
                 <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+                <!-- 게임 UI 블럭 판넬-->
+                <div id="game-overay-panel" class="hidden"></div>
             </div>
         
 
@@ -85,7 +88,7 @@
 
 
 
-    <div id="dialog-box" class="hidden" title="">
+    <div id="solve-dialog" class="hidden titleless_dlg" title="">
         <br>
         <p>
         <!--
@@ -95,22 +98,20 @@
         </p>
     </div>
 
+    <!-- 전체 UI 블럭 판넬-->
+    <div id="full-overay-panel" class="hidden"></div>
 
     <script src="jquery-ui/jquery-3.3.1.min.js"></script>
     <script src="jquery-ui/jquery-ui.min.js"></script>
 
 
-    <script>
-        /*
-        $( function() {
-            $( "input" ).checkboxradio({
-            icon: false
-            });
-        } );
-        */
+    <script type='text/javascript'>
+        // UI 제어 부분.
+
         $( function() {
             // 라디오버튼 초기화
-            $("input").checkboxradio({
+            //$("input").checkboxradio({
+            $(".rb").checkboxradio({                
                 icon: false
             }).click(function (event) {
                 console.log(event.target.id); 
@@ -120,8 +121,21 @@
             // https://stackoverflow.com/questions/3759088/jquery-ui-radio-button-how-to-correctly-switch-checked-state
             $("#rd-play").prop('checked', true).button("refresh");
 
-            // 다이얼로그 초기화
-            $("#dialog-box" ).dialog({
+            function doProcMove() {
+                //console.log('procMove');
+
+                if (Module.proc_Count() > 1) {
+                    Module.proc_Move(); 
+
+                    setTimeout(doProcMove, 500);
+
+                } else {
+                    $("#full-overay-panel").addClass('hidden');
+                }
+            }
+
+            // 풀이 다이얼로그 초기화
+            $("#solve-dialog" ).dialog({
                 autoOpen: false,
                 modal: true,
                 closeOnEscape: false,
@@ -147,78 +161,70 @@
                 hide: "fade",
 
                 open: function(event, ui) {
-                    //$(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
-                    //$(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
                     $(".ui-dialog-titlebar").hide();
-                    //$('.ui-widget-overlay', this).hide().fadeIn(200);
                     $('.ui-widget-overlay').hide().fadeIn();
 
+                    // 바로 닫히면 없어보이니 500ms 후에 풀기 시작. 
+                    setTimeout(function() {
+                        var ret = Module.proc_Solve();
+                        //console.log(ret); 
+                        
+                        $("#solve-dialog").dialog('close');
+
+                        // 화면 전체 블럭. 
+                        $("#full-overay-panel").removeClass('hidden').focus();
+
+                    }, 500);
 
 
+
+                    /*
                     //setTimeout("$('#dialog-message').dialog('close')",3000);
                     setTimeout(function () {
-                        /*
-                        $("#dialog-box").fadeOut(function() {
-                            $('.ui-widget-overlay').fadeOut();    
-                            $("#dialog-box").dialog('close');    
-                        })
-                        */
-                        /*
-                        $('.ui-widget-overlay').fadeOut();
+                        $("#solve-dialog").dialog('close');
 
-                        $("#dialog-box").dialog('close');
-                        */
 
-                        /* // 후보 1
-                        $('.ui-widget-overlay').fadeOut(
-                            function() {
-                                $("#dialog-box").dialog('close');
-                            }
-                        );
-                        // */
+                        // 1초간 UI 막기 테스트. 
+                        $("#full-overay-panel").removeClass('hidden').focus();
+                        setTimeout(function () {
+                            $("#full-overay-panel").addClass('hidden');
 
-                        //$("#dialog-box").dialog().fadeOut(); 
+                        }, 1000);
 
-                        $("#dialog-box").dialog('close');
-                        //$(this).dialog('close');
-
-                        //console.log('start close');
-                        //$(".ui-dialog-titlebar").show();
                     }, 1500);
+                    */
                 },
                 
                 beforeClose: function(event, ui) {
                     // modal 옵션을 꺼서 오버레이가 닫히지 않게 하고
-                    $("#dialog-box").dialog('option', 'modal', false);
+                    $("#solve-dialog").dialog('option', 'modal', false);
                     $(document).off( 'focusin' ).off( 'focusin' );
                     // 오버레이에 직접 페이드아웃을 건다
                     $('.ui-widget-overlay').fadeOut(function () {
                         //console.log('fade out');
                         // 다이얼로그 정리에 준하는 처리를 해준다. 
-                        $("#dialog-box").dialog('option', 'modal', true);
+                        $("#solve-dialog").dialog('option', 'modal', true);
                         $('.ui-widget-overlay').remove();
-                        var overlays = $(document).data( "ui-dialog-overlays" ) - 1;
-                        if ( !overlays ) {
-                            $(document).removeData( "ui-dialog-overlays")
-                            //$(document).off( 'focusin' ).off( 'focusin' );
-                        } else {
-                            $(document).data( "ui-dialog-overlays", overlays );
-                        }
+                        $(document).removeData( "ui-dialog-overlays");
+                        // var overlays = $(document).data( "ui-dialog-overlays" ) - 1;
+                        // if ( !overlays ) {
+                        //     $(document).removeData( "ui-dialog-overlays")
+                        //     //$(document).off( 'focusin' ).off( 'focusin' );
+                        // } else {
+                        //     $(document).data( "ui-dialog-overlays", overlays );
+                        // }
                     }); 
 
                 },
 
                 close: function(event, ui) {
-                    //$(".ui-dialog-titlebar").show();
-                    //$('.ui-widget-overlay').show()//.fadeOut();
-                    //console.log('close');
-                    //$('.ui-widget-overlay').show();
-                    //$("#dialog-box").dialog('option', 'modal', true);
-
+                    // 닫히고 500ms 후에 이동 시작. 
+                    setTimeout(function() {
+                        doProcMove();
+                    }, 500);
                 }
 
                 /*
-                modal: true,
                 buttons: {
                     Ok: function() {
                     $( this ).dialog( "close" );
@@ -230,7 +236,7 @@
             // 풀이버튼 동작
             $("#solve").button().click(function() {
                 $(".ui-dialog-titlebar").hide();
-                $("#dialog-box" ).dialog('open'); 
+                $("#solve-dialog" ).dialog('open'); 
             }); 
 
             // 출력 버튼 초기화
@@ -258,7 +264,9 @@
             $("#test").button().click(function() {
                 //alert ('test');
                 //document.getElementById('canvas').setAttribute("style","width:600px");
+                Module.testQuaker();
 
+                Module.testFunc("hahaha");
             });
 
             /*
@@ -267,16 +275,20 @@
     </script>
 
     <script type='text/javascript'>
-        var statusElement = document.getElementById('status');
-        var progressElement = document.getElementById('progress');
-        var spinnerElement = document.getElementById('spinner');
+        // emscripten 제어부. 
 
+        // 브라우저 크기 조절에 따라 캔버스 내 OpenGL 크기 재설정. 
         window.addEventListener('resize', function(e) {
             //console.log(e); 
             //console.log(Module.canvas.clientWidth);
             //console.log(Module.canvas.clientHeight);
             Browser.setCanvasSize(Module.canvas.clientWidth, Module.canvas.clientHeight);
         });
+
+        var statusElement = document.getElementById('status');
+        var progressElement = document.getElementById('progress');
+        var spinnerElement = document.getElementById('spinner');
+
 
         var Module = {
         preRun: [],

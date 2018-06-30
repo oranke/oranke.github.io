@@ -11,14 +11,15 @@ li { list-style: none; }
 .hidden {display: none; }
 
 #page-wrapper, #main-header, #main-content, #main-footer, 
-#buttons-area, #view-area {
+#buttons-area, #view-area, #full-overay-panel, #game-overay-panel{
     position: absolute;
     /*
     overflow: hidden; 
     */
 
-} 
-#dialog-box { 
+}
+
+.titleless_dlg { 
     height: 100; 
     text-align: center; 
     line-height: 1.3em; 
@@ -112,7 +113,8 @@ body {
     background: black;
     /*
     border: 1px solid rgb(100, 100, 100); 
-    background: rgb(255, 211, 253); 
+    background: rgb(34, 0, 78);
+    background: black;
     */
 }
 
@@ -151,4 +153,8 @@ body {
     border: 1px solid blue; 
     */
 
+}
+
+#full-overay-panel, #game-overay-panel {
+    left:0; right: 0; top: 0; bottom: 0; 
 }
