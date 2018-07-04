@@ -1,16 +1,326 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pharaoh level editor</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  
     <link rel="stylesheet" type="text/css" media="screen" href="jquery-ui/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+
+    <!--
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    -->
+    <script src="jquery-ui/jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+    <script type='text/javascript'>
+        // UI 제어 부분.
+
+        $( function() {
+            // 라디오버튼 초기화
+            //$("input").checkboxradio({
+            $(".rb").checkboxradio({                
+                icon: false
+            }).click(function (event) {
+                console.log(event.target.id); 
+
+                switch (event.target.id) {
+                    case 'rd-play':
+                        Module.setItrMode(0, 0);
+                        break; 
+
+                    case 'rd-PH':
+                        Module.setItrMode(1, 51);
+                        break; 
+                    
+                    case 'rd-V2':
+                        Module.setItrMode(1, 21);
+                        break; 
+
+                    case 'rd-V3':
+                        Module.setItrMode(1, 41);
+                        break; 
+
+                    case 'rd-H2':
+                        Module.setItrMode(1, 11);
+                        break;
+                    
+                    case 'rd-H3':
+                        Module.setItrMode(1, 31);
+                        break; 
+
+                    case 'rd-delete':
+                        Module.setItrMode(2, 0); 
+                        break; 
+
+                }
+
+                //console.log('ahaha')
+            });
+            // play 버튼은 누른 채 시작. 
+            // https://stackoverflow.com/questions/3759088/jquery-ui-radio-button-how-to-correctly-switch-checked-state
+            $("#rd-play").prop('checked', true).button("refresh");
+
+            function doProcMove() {
+                //console.log('procMove');
+
+                if (Module.proc_Count() > 1) {
+                    Module.proc_Move(); 
+
+                    setTimeout(doProcMove, 500);
+
+                } else {
+                    $("#full-overay-panel").addClass('hidden');
+                }
+            }
+
+            // 풀이 다이얼로그 
+            $("#solve-dialog" ).dialog({
+                autoOpen: false,
+                modal: true,
+                closeOnEscape: false,
+                maxHeight: 100,
+                height: 100,
+                draggable: false,
+                resizable: false,
+
+                /*
+                //dialogClass: "no-titlebar",
+                show: {
+                    //effect: "blind",
+                    effect: "fade",
+                    duration: 300
+                },
+                hide: {
+                    //effect: "explode",
+                    effect: "fade",
+                    duration: 300
+                },
+                */
+                show: "fade",
+                hide: "fade",
+
+                open: function(event, ui) {
+                    $(".ui-dialog-titlebar").hide();
+                    $('.ui-widget-overlay').hide().fadeIn();
+
+                    // 바로 닫히면 없어보이니 500ms 후에 풀기 시작. 
+                    setTimeout(function() {
+                        var ret = Module.proc_Solve();
+                        //console.log(ret); 
+                        
+                        $("#solve-dialog").dialog('close');
+
+                        // 화면 전체 블럭. 
+                        $("#full-overay-panel").removeClass('hidden');
+                        $("#full-overay-panel").focus()
+
+
+                    }, 500);
+
+
+
+                    /*
+                    //setTimeout("$('#dialog-message').dialog('close')",3000);
+                    setTimeout(function () {
+                        $("#solve-dialog").dialog('close');
+
+
+                        // 1초간 UI 막기 테스트. 
+                        $("#full-overay-panel").removeClass('hidden').focus();
+                        setTimeout(function () {
+                            $("#full-overay-panel").addClass('hidden');
+
+                        }, 1000);
+
+                    }, 1500);
+                    */
+                },
+                
+                beforeClose: function(event, ui) {
+                    // modal 옵션을 꺼서 오버레이가 닫히지 않게 하고
+                    $("#solve-dialog").dialog('option', 'modal', false);
+                    $(document).off( 'focusin' ).off( 'focusin' );
+                    // 오버레이에 직접 페이드아웃을 건다
+                    $('.ui-widget-overlay').fadeOut(function () {
+                        //console.log('fade out');
+                        // 다이얼로그 정리에 준하는 처리를 해준다. 
+                        $("#solve-dialog").dialog('option', 'modal', true);
+                        $('.ui-widget-overlay').remove();
+                        $(document).removeData( "ui-dialog-overlays");
+                        // var overlays = $(document).data( "ui-dialog-overlays" ) - 1;
+                        // if ( !overlays ) {
+                        //     $(document).removeData( "ui-dialog-overlays")
+                        //     //$(document).off( 'focusin' ).off( 'focusin' );
+                        // } else {
+                        //     $(document).data( "ui-dialog-overlays", overlays );
+                        // }
+                    }); 
+
+                },
+
+                close: function(event, ui) {
+                    // 닫히고 100ms 후에 이동 시작. 
+                    setTimeout(function() {
+                        doProcMove();
+                    }, 100);
+                }
+
+                /*
+                buttons: {
+                    Ok: function() {
+                    $( this ).dialog( "close" );
+                    }
+                }
+                */
+            });            
+            
+            // 풀이버튼 동작
+            $("#solve").button().click(function() {
+                $(".ui-dialog-titlebar").hide();
+                $("#solve-dialog" ).dialog('open'); 
+            }); 
+
+            // 출력 다이얼로그 
+            $("#export-dialog" ).dialog({
+                autoOpen: false,
+                modal: true,
+                width: 500,
+                buttons: {
+                    copy : function() {
+                        // 참고: https://codepen.io/shaikmaqsood/pen/XmydxJ
+                        var element = $("#export-text");
+                        var $temp = $("<input>");
+                        $("body").append($temp);
+                        $temp.val(element.val()).select();
+                        $temp.focus(); 
+                        document.execCommand("copy");
+                        $temp.remove();
+                        alert('Copied!')
+                    },
+                    close: function() {
+                        $(this).dialog('close');
+                    }
+                }
+            });            
+
+            
+            // 출력 버튼 클릭
+            $("#export").button().click(function() {
+                $(".ui-dialog-titlebar").show();
+                $("#export-text").val(Module.export_Blocks());
+                $("#export-dialog").dialog('open');
+            }); 
+
+            function convert_import () {
+                var c = $("#import-text").val().split(',');
+                var arr = []; 
+
+                for (i=0; i< c.length; i++) {
+                    var s = c[i].split('-');
+                    item = {};
+                    item.pos = parseInt(s[0]);
+                    item.dir = parseInt(s[1]);
+                    item.len = parseInt(s[2]);
+                    item.type = 0; 
+
+                    switch (item.dir) {
+                        case 0:
+                            switch (item.len) {
+                                case 2: item.type = 11; break; 
+                                case 3: item.type = 31; break; 
+                            }
+                            break; 
+
+                        case 1:
+                            switch (item.len) {
+                                case 2: item.type = 21; break; 
+                                case 3: item.type = 41; break; 
+                            }
+                            break; 
+                    }
+                    //console.log(item);
+                    arr.push(item);
+                }
+
+                return arr; 
+            }
+
+            function proc_import(blocks) {
+                if (blocks.length == 0) return; 
+
+                Module.clear_Blocks();
+
+                // 첫번째 정보가 주인공 파라오인지 살핀다. 
+                if (
+                    (blocks[0].pos >= 12) && (blocks[0].pos < 16) &&
+                    (blocks[0].dir == 0) && (blocks[0].len == 2)
+                   )
+                {
+                    Module.add_Block(blocks[0].pos, 51);   
+                } else {
+                    Module.add_Block(blocks[0].pos, blocks[0].type);
+                }
+
+                // 나머지 블럭들 박아준다. 
+                for (i=1; i<blocks.length; i++) {
+                    Module.add_Block(blocks[i].pos, blocks[i].type);
+                }
+            }
+
+            // 입력 다이얼로그 
+            $("#import-dialog" ).dialog({
+                autoOpen: false,
+                modal: true,
+                width:500,
+
+                buttons: {
+                    ok: function() {
+                        $(this).dialog('close');
+                        //console.log($("#import-text").val())
+                        var blockdata = convert_import(); 
+                        console.log(blockdata); 
+                        proc_import(blockdata); 
+                    },
+                    cancel: function(){
+                        $(this).dialog('close');
+                    }
+                }
+            });            
+
+
+            // 입력 버튼 동작
+            $("#import").button().click(function() {
+                $(".ui-dialog-titlebar").show();
+                $("#import-text").val('');
+                $("#import-dialog").dialog('open');
+            });
+
+
+            // 테스트 버튼 동작
+            $("#test").button().click(function() {
+                //alert ('test');
+                //document.getElementById('canvas').setAttribute("style","width:600px");
+                //Module.testQuaker();
+                //console.log(Module.export_Blocks());
+                //Module.testFunc("hahaha");
+
+
+            });
+
+            /*
+            */
+        } );
+    </script>
+
 </head>
+
 <body>
     <div id="page-wrapper">
-
         <header id="main-header">
              <!-- 여긴 헤더야!! 아하하!! -->
             <hgroup>
@@ -98,196 +408,53 @@
         </p>
     </div>
 
+    <div id="export-dialog" class="hidden" title="Export block string">
+        <p>
+        </p>
+        <p>
+            <input type="text" id="export-text" style="width:100%" readonly>
+        </p>
+    </div>
+
+    <div id="import-dialog" class="hidden" title="Import block string">
+        <p>
+        </p>
+        <p>
+            <input type="text" id="import-text" style="width:100%">
+        </p>
+    </div>
+
+
+
     <!-- 전체 UI 블럭 판넬-->
     <div id="full-overay-panel" class="hidden"></div>
 
-    <script src="jquery-ui/jquery-3.3.1.min.js"></script>
-    <script src="jquery-ui/jquery-ui.min.js"></script>
 
-
-    <script type='text/javascript'>
-        // UI 제어 부분.
-
-        $( function() {
-            // 라디오버튼 초기화
-            //$("input").checkboxradio({
-            $(".rb").checkboxradio({                
-                icon: false
-            }).click(function (event) {
-                console.log(event.target.id); 
-                //console.log('ahaha')
-            });
-            // play 버튼은 누른 채 시작. 
-            // https://stackoverflow.com/questions/3759088/jquery-ui-radio-button-how-to-correctly-switch-checked-state
-            $("#rd-play").prop('checked', true).button("refresh");
-
-            function doProcMove() {
-                //console.log('procMove');
-
-                if (Module.proc_Count() > 1) {
-                    Module.proc_Move(); 
-
-                    setTimeout(doProcMove, 500);
-
-                } else {
-                    $("#full-overay-panel").addClass('hidden');
-                }
-            }
-
-            // 풀이 다이얼로그 초기화
-            $("#solve-dialog" ).dialog({
-                autoOpen: false,
-                modal: true,
-                closeOnEscape: false,
-                maxHeight: 100,
-                height: 100,
-                draggable: false,
-                resizable: false,
-
-                /*
-                //dialogClass: "no-titlebar",
-                show: {
-                    //effect: "blind",
-                    effect: "fade",
-                    duration: 300
-                },
-                hide: {
-                    //effect: "explode",
-                    effect: "fade",
-                    duration: 300
-                },
-                */
-                show: "fade",
-                hide: "fade",
-
-                open: function(event, ui) {
-                    $(".ui-dialog-titlebar").hide();
-                    $('.ui-widget-overlay').hide().fadeIn();
-
-                    // 바로 닫히면 없어보이니 500ms 후에 풀기 시작. 
-                    setTimeout(function() {
-                        var ret = Module.proc_Solve();
-                        //console.log(ret); 
-                        
-                        $("#solve-dialog").dialog('close');
-
-                        // 화면 전체 블럭. 
-                        $("#full-overay-panel").removeClass('hidden').focus();
-
-                    }, 500);
-
-
-
-                    /*
-                    //setTimeout("$('#dialog-message').dialog('close')",3000);
-                    setTimeout(function () {
-                        $("#solve-dialog").dialog('close');
-
-
-                        // 1초간 UI 막기 테스트. 
-                        $("#full-overay-panel").removeClass('hidden').focus();
-                        setTimeout(function () {
-                            $("#full-overay-panel").addClass('hidden');
-
-                        }, 1000);
-
-                    }, 1500);
-                    */
-                },
-                
-                beforeClose: function(event, ui) {
-                    // modal 옵션을 꺼서 오버레이가 닫히지 않게 하고
-                    $("#solve-dialog").dialog('option', 'modal', false);
-                    $(document).off( 'focusin' ).off( 'focusin' );
-                    // 오버레이에 직접 페이드아웃을 건다
-                    $('.ui-widget-overlay').fadeOut(function () {
-                        //console.log('fade out');
-                        // 다이얼로그 정리에 준하는 처리를 해준다. 
-                        $("#solve-dialog").dialog('option', 'modal', true);
-                        $('.ui-widget-overlay').remove();
-                        $(document).removeData( "ui-dialog-overlays");
-                        // var overlays = $(document).data( "ui-dialog-overlays" ) - 1;
-                        // if ( !overlays ) {
-                        //     $(document).removeData( "ui-dialog-overlays")
-                        //     //$(document).off( 'focusin' ).off( 'focusin' );
-                        // } else {
-                        //     $(document).data( "ui-dialog-overlays", overlays );
-                        // }
-                    }); 
-
-                },
-
-                close: function(event, ui) {
-                    // 닫히고 500ms 후에 이동 시작. 
-                    setTimeout(function() {
-                        doProcMove();
-                    }, 500);
-                }
-
-                /*
-                buttons: {
-                    Ok: function() {
-                    $( this ).dialog( "close" );
-                    }
-                }
-                */
-            });            
-            
-            // 풀이버튼 동작
-            $("#solve").button().click(function() {
-                $(".ui-dialog-titlebar").hide();
-                $("#solve-dialog" ).dialog('open'); 
-            }); 
-
-            // 출력 버튼 초기화
-            $("#export").button().click(function() {
-                /*
-                $("#effect" ).dialog({
-
-                }).show(
-                    "Drop", {}, function () {
-                        //$( "#effect" ).removeAttr( "style" ).hide().fadeIn();
-
-                    }
-                );
-                */
-
-            }); 
-
-            // 입력 버튼 초기화
-            $("#import").button().click(function() {
-
-            });
-
-
-            // 테스트 버튼 초기화
-            $("#test").button().click(function() {
-                //alert ('test');
-                //document.getElementById('canvas').setAttribute("style","width:600px");
-                Module.testQuaker();
-
-                Module.testFunc("hahaha");
-            });
-
-            /*
-            */
-        } );
-    </script>
 
     <script type='text/javascript'>
         // emscripten 제어부. 
+
+        var statusElement = document.getElementById('status');
+        var progressElement = document.getElementById('progress');
+        var spinnerElement = document.getElementById('spinner');
 
         // 브라우저 크기 조절에 따라 캔버스 내 OpenGL 크기 재설정. 
         window.addEventListener('resize', function(e) {
             //console.log(e); 
             //console.log(Module.canvas.clientWidth);
             //console.log(Module.canvas.clientHeight);
-            Browser.setCanvasSize(Module.canvas.clientWidth, Module.canvas.clientHeight);
-        });
+            //Browser.setCanvasSize(Module.canvas.clientWidth, Module.canvas.clientHeight);
+            //Module.setRenderSize(Module.canvas.clientWidth, Module.canvas.clientHeight);
+            
+            // closure 컴파일시 Browser 객체가 없음. 이렇게 대체. 
+            var w = canvas.clientWidth;
+            var h = canvas.clientHeight;
+            if (canvas.width  != w) canvas.width  = w;
+            if (canvas.height != h) canvas.height = h;
+            Module.setRenderSize(w, h);
+            //Module.setStatus('haha')
 
-        var statusElement = document.getElementById('status');
-        var progressElement = document.getElementById('progress');
-        var spinnerElement = document.getElementById('spinner');
+        });
 
 
         var Module = {
@@ -364,8 +531,10 @@
             if (text) Module.printErr('[post-exception status] ' + text);
         };
         };
+        
     </script>    
 
     <script async type="text/javascript" src="pharaoh.js"></script>
+    
 </body>
 </html>
