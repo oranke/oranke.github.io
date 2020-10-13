@@ -1226,6 +1226,15 @@
       var progressElement = document.getElementById('progress');
       var spinnerElement = document.getElementById('spinner');
 
+      // Set browser resize event
+      window.addEventListener('resize', function() {
+        var w = canvas.clientWidth;
+        var h = canvas.clientHeight;
+        if (canvas.width  != w) canvas.width  = w;
+        if (canvas.height != h) canvas.height = h;
+        Module.setRenderSize(w, h);
+      });
+
       var Module = {
         preRun: [],
         postRun: [],
