@@ -31,6 +31,7 @@
 
             // Set browser resize event
             window.addEventListener('resize', function() {
+                var canvas = document.getElementById('canvas');
                 var w = canvas.clientWidth;
                 var h = canvas.clientHeight;
                 if (canvas.width  != w) canvas.width  = w;
