@@ -10,6 +10,46 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <script>
+        function initApp() {
+            // Set resource download base and bkw name.
+            Module.setUrlBase('./');
+            Module.setBkwName('FactoryLine2');
+
+            // Set camear pos to factory center
+            Module.setCameraPos(14.0, 0, 10.0, false, false); 
+            // Set wheel event to zoom
+            var canvas = document.getElementById('canvas'); 
+            canvas.addEventListener("wheel", function(event) {
+                //console.log('haha', event)
+                //setSceneScale( event.deltaY ); 
+
+                Module.setCameraRot_Fov( -event.deltaY / 50, true, true );
+
+                event.preventDefault(); 
+            }, {passive: false})
+            Module.setCameraRotSpeed_Fov(10, 100, 1);
+
+            // Set browser resize event
+            window.addEventListener('resize', function() {
+                var w = canvas.clientWidth;
+                var h = canvas.clientHeight;
+                if (canvas.width  != w) canvas.width  = w;
+                if (canvas.height != h) canvas.height = h;
+                Module.setRenderSize(w, h);
+            });
+            
+            $('#btn_bgcolor_1').click(function(){
+                Module.setSceneFogColor(0, 0, 0, 1);
+            });
+
+            $('#btn_bgcolor_2').click(function(){
+                Module.setSceneFogColor(0.5, 0.5, 1, 1);
+            });
+
+            $('#btn_bgcolor_3').click(function(){
+                Module.setSceneFogColor(0, 0, 0, 0);
+            });
+        }
     </script>
 
 
@@ -24,8 +64,18 @@
             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
         </div>
         <textarea id="output" rows="8" readonly></textarea>
-        <div class="emscripten" id="status">Downloading...</div>
 
+        <hr>
+        <h3>Bg Color</h3>
+        <button id="btn_bgcolor_1">Black</button>
+        <button id="btn_bgcolor_2">Blue</button>
+        <button id="btn_bgcolor_3">Transparent</button>
+
+        <hr>
+        <h3>Scene structure</h3>
+
+        <br>
+        <div class="emscripten" id="status">Downloading...</div>
         <div class="emscripten">
             <progress value="0" max="100" id="progress" hidden=1></progress>
         </div>
@@ -42,21 +92,10 @@
                 }
             ],
             postRun: [
+                initApp,
+
                 function(){
                     // console.log('Postrun 1');
-
-                    // Set resource download base and bkw name.
-                    Module.setUrlBase('./');
-                    Module.setBkwName('FactoryLine2');
-
-                    // Set browser resize event
-                    window.addEventListener('resize', function() {
-                        var w = canvas.clientWidth;
-                        var h = canvas.clientHeight;
-                        if (canvas.width  != w) canvas.width  = w;
-                        if (canvas.height != h) canvas.height = h;
-                        Module.setRenderSize(w, h);
-                    });
                 }
             ],
 
@@ -133,7 +172,8 @@
             Module.setStatus = function(text) {
                 if (text) Module.printErr('[post-exception status] ' + text);
             };
-        };        
+        };
+        
     </script>
     <script async type="text/javascript" src="bkw_viewer.js"></script>
 

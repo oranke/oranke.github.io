@@ -35,9 +35,10 @@ canvas {
 }
 
 canvas.emscripten { 
-    border: 0px none; 
-    background-color: black; 
+    border: 1px black solid; 
     /*
+    background-color: black; 
+    border: 0px none; 
     */
     width: 100%; height: 100%;
 }
