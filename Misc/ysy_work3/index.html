@@ -11,6 +11,18 @@
 
     <script>
         function initApp() {
+            var sceneDiffuse = {
+                r: 1.0,
+                g: 1.0, 
+                b: 1.0
+            };
+
+            var sceneAmbient = {
+                r: 0.4,
+                g: 0.4, 
+                b: 0.4
+            }
+
             // Set resource download base and bkw name.
             Module.setUrlBase('./');
             Module.setBkwName('FactoryLine2');
@@ -50,6 +62,54 @@
             $('#btn_bgcolor_3').click(function(){
                 Module.setSceneFogColor(0, 0, 0, 0);
             });
+
+            $('#btn_lignt_inc').click(function(){
+                sceneDiffuse.r += 0.1;
+                sceneDiffuse.g += 0.1;
+                sceneDiffuse.b += 0.1;
+                sceneAmbient.r += 0.1;
+                sceneAmbient.g += 0.1;
+                sceneAmbient.b += 0.1;
+
+                Module.setSceneDiffuse(
+                    sceneDiffuse.r,
+                    sceneDiffuse.g,
+                    sceneDiffuse.b
+                );
+
+                Module.setSceneAmbient(
+                    sceneAmbient.r,
+                    sceneAmbient.g,
+                    sceneAmbient.b
+                );
+            });
+
+            $('#btn_lignt_dec').click(function(){
+                sceneDiffuse.r -= 0.1;
+                sceneDiffuse.g -= 0.1;
+                sceneDiffuse.b -= 0.1;
+                if (sceneDiffuse.r < 0) sceneDiffuse.r = 0;
+                if (sceneDiffuse.g < 0) sceneDiffuse.g = 0;
+                if (sceneDiffuse.b < 0) sceneDiffuse.b = 0;
+                sceneAmbient.r -= 0.1;
+                sceneAmbient.g -= 0.1;
+                sceneAmbient.b -= 0.1;
+                if (sceneAmbient.r < 0) sceneAmbient.r = 0;
+                if (sceneAmbient.g < 0) sceneAmbient.g = 0;
+                if (sceneAmbient.b < 0) sceneAmbient.b = 0;
+
+                Module.setSceneDiffuse(
+                    sceneDiffuse.r,
+                    sceneDiffuse.g,
+                    sceneDiffuse.b
+                );
+
+                Module.setSceneAmbient(
+                    sceneAmbient.r,
+                    sceneAmbient.g,
+                    sceneAmbient.b
+                );
+            });
         }
     </script>
 
@@ -71,6 +131,8 @@
         <button id="btn_bgcolor_1">Black</button>
         <button id="btn_bgcolor_2">Blue</button>
         <button id="btn_bgcolor_3">Transparent</button>
+        <button id="btn_lignt_inc">Light +</button>
+        <button id="btn_lignt_dec">Light -</button>
 
         <hr>
         <h3>Scene structure</h3>
