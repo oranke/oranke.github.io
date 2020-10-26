@@ -194,7 +194,7 @@ Module['FS_createPath']('/effects', 'GTSAS', true, true);
   }
 
  }
- loadPackage({"files": [{"audio": 0, "start": 0, "crunched": 0, "end": 178, "filename": "/effects/GTMAS/00000019.tm"}, {"audio": 0, "start": 178, "crunched": 0, "end": 240, "filename": "/effects/GTMAS/00000009.tm"}, {"audio": 0, "start": 240, "crunched": 0, "end": 368, "filename": "/effects/GTMAS/00000018.tm"}, {"audio": 0, "start": 368, "crunched": 0, "end": 427, "filename": "/effects/GTMAS/00000008.tm"}, {"audio": 0, "start": 427, "crunched": 0, "end": 502, "filename": "/effects/GTMAS/0CEF0004.tm"}, {"audio": 0, "start": 502, "crunched": 0, "end": 877, "filename": "/effects/GTMAS/00000017.tm"}, {"audio": 0, "start": 877, "crunched": 0, "end": 946, "filename": "/effects/GTMAS/0000000D.tm"}, {"audio": 0, "start": 946, "crunched": 0, "end": 1006, "filename": "/effects/GTMAS/00000013.tm"}, {"audio": 0, "start": 1006, "crunched": 0, "end": 1066, "filename": "/effects/GTMAS/00000003.tm"}, {"audio": 0, "start": 1066, "crunched": 0, "end": 1210, "filename": "/effects/GTMAS/0000000E.tm"}, {"audio": 0, "start": 1210, "crunched": 0, "end": 1288, "filename": "/effects/GTMAS/0CEF0001.tm"}, {"audio": 0, "start": 1288, "crunched": 0, "end": 1358, "filename": "/effects/GTMAS/00000012.tm"}, {"audio": 0, "start": 1358, "crunched": 0, "end": 1698, "filename": "/effects/GTMAS/00000002.tm"}, {"audio": 0, "start": 1698, "crunched": 0, "end": 1760, "filename": "/effects/GTMAS/0000001E.tm"}, {"audio": 0, "start": 1760, "crunched": 0, "end": 1837, "filename": "/effects/GTMAS/0CEF0005.tm"}, {"audio": 0, "start": 1837, "crunched": 0, "end": 1896, "filename": "/effects/GTMAS/0000000A.tm"}, {"audio": 0, "start": 1896, "crunched": 0, "end": 1957, "filename": "/effects/GTMAS/00000016.tm"}, {"audio": 0, "start": 1957, "crunched": 0, "end": 2054, "filename": "/effects/GTMAS/0000001A.tm"}, {"audio": 0, "start": 2054, "crunched": 0, "end": 2111, "filename": "/effects/GTMAS/0000000F.tm"}, {"audio": 0, "start": 2111, "crunched": 0, "end": 2187, "filename": "/effects/GTMAS/0CEF0002.tm"}, {"audio": 0, "start": 2187, "crunched": 0, "end": 2344, "filename": "/effects/GTMAS/0000C350.tm"}, {"audio": 0, "start": 2344, "crunched": 0, "end": 2417, "filename": "/effects/GTMAS/00000011.tm"}, {"audio": 0, "start": 2417, "crunched": 0, "end": 2478, "filename": "/effects/GTMAS/00000001.tm"}, {"audio": 0, "start": 2478, "crunched": 0, "end": 2538, "filename": "/effects/GTMAS/0000001F.tm"}, {"audio": 0, "start": 2538, "crunched": 0, "end": 2610, "filename": "/effects/GTMAS/0000000B.tm"}, {"audio": 0, "start": 2610, "crunched": 0, "end": 2671, "filename": "/effects/GTMAS/00000015.tm"}, {"audio": 0, "start": 2671, "crunched": 0, "end": 2771, "filename": "/effects/GTMAS/0000001B.tm"}, {"audio": 0, "start": 2771, "crunched": 0, "end": 2856, "filename": "/effects/GTMAS/0000000C.tm"}, {"audio": 0, "start": 2856, "crunched": 0, "end": 3170, "filename": "/effects/GTMAS/00000020.tm"}, {"audio": 0, "start": 3170, "crunched": 0, "end": 3234, "filename": "/effects/GTMAS/0000001C.tm"}, {"audio": 0, "start": 3234, "crunched": 0, "end": 3300, "filename": "/effects/GTMAS/0CEF0003.tm"}, {"audio": 0, "start": 3300, "crunched": 0, "end": 3360, "filename": "/effects/GTMAS/00000010.tm"}, {"audio": 0, "start": 3360, "crunched": 0, "end": 3672, "filename": "/effects/GTMAS/00000000.tm"}, {"audio": 0, "start": 3672, "crunched": 0, "end": 3732, "filename": "/effects/GDFAS/0CEF0004.df"}, {"audio": 0, "start": 3732, "crunched": 0, "end": 3795, "filename": "/effects/GDFAS/00000023.df"}, {"audio": 0, "start": 3795, "crunched": 0, "end": 3858, "filename": "/effects/GDFAS/00000017.df"}, {"audio": 0, "start": 3858, "crunched": 0, "end": 3910, "filename": "/effects/GDFAS/00000007.df"}, {"audio": 0, "start": 3910, "crunched": 0, "end": 3972, "filename": "/effects/GDFAS/0000002D.df"}, {"audio": 0, "start": 3972, "crunched": 0, "end": 4033, "filename": "/effects/GDFAS/00000013.df"}, {"audio": 0, "start": 4033, "crunched": 0, "end": 4091, "filename": "/effects/GDFAS/00000027.df"}, {"audio": 0, "start": 4091, "crunched": 0, "end": 4145, "filename": "/effects/GDFAS/00000037.df"}, {"audio": 0, "start": 4145, "crunched": 0, "end": 4209, "filename": "/effects/GDFAS/00000003.df"}, {"audio": 0, "start": 4209, "crunched": 0, "end": 4270, "filename": "/effects/GDFAS/0000001D.df"}, {"audio": 0, "start": 4270, "crunched": 0, "end": 4331, "filename": "/effects/GDFAS/0CEF0001.df"}, {"audio": 0, "start": 4331, "crunched": 0, "end": 4387, "filename": "/effects/GDFAS/00000026.df"}, {"audio": 0, "start": 4387, "crunched": 0, "end": 4448, "filename": "/effects/GDFAS/00000036.df"}, {"audio": 0, "start": 4448, "crunched": 0, "end": 4530, "filename": "/effects/GDFAS/00000002.df"}, {"audio": 0, "start": 4530, "crunched": 0, "end": 4583, "filename": "/effects/GDFAS/0000001E.df"}, {"audio": 0, "start": 4583, "crunched": 0, "end": 4646, "filename": "/effects/GDFAS/0000002A.df"}, {"audio": 0, "start": 4646, "crunched": 0, "end": 4698, "filename": "/effects/GDFAS/0000000A.df"}, {"audio": 0, "start": 4698, "crunched": 0, "end": 4754, "filename": "/effects/GDFAS/0CEF0005.df"}, {"audio": 0, "start": 4754, "crunched": 0, "end": 4811, "filename": "/effects/GDFAS/00000022.df"}, {"audio": 0, "start": 4811, "crunched": 0, "end": 4871, "filename": "/effects/GDFAS/00000016.df"}, {"audio": 0, "start": 4871, "crunched": 0, "end": 4922, "filename": "/effects/GDFAS/00000006.df"}, {"audio": 0, "start": 4922, "crunched": 0, "end": 4987, "filename": "/effects/GDFAS/00000032.df"}, {"audio": 0, "start": 4987, "crunched": 0, "end": 5041, "filename": "/effects/GDFAS/0000002E.df"}, {"audio": 0, "start": 5041, "crunched": 0, "end": 5098, "filename": "/effects/GDFAS/0000001A.df"}, {"audio": 0, "start": 5098, "crunched": 0, "end": 5155, "filename": "/effects/GDFAS/00000029.df"}, {"audio": 0, "start": 5155, "crunched": 0, "end": 5217, "filename": "/effects/GDFAS/00000039.df"}, {"audio": 0, "start": 5217, "crunched": 0, "end": 5281, "filename": "/effects/GDFAS/00000019.df"}, {"audio": 0, "start": 5281, "crunched": 0, "end": 5333, "filename": "/effects/GDFAS/00000009.df"}, {"audio": 0, "start": 5333, "crunched": 0, "end": 5396, "filename": "/effects/GDFAS/00000018.df"}, {"audio": 0, "start": 5396, "crunched": 0, "end": 5448, "filename": "/effects/GDFAS/00000008.df"}, {"audio": 0, "start": 5448, "crunched": 0, "end": 5505, "filename": "/effects/GDFAS/00000028.df"}, {"audio": 0, "start": 5505, "crunched": 0, "end": 5558, "filename": "/effects/GDFAS/00000038.df"}, {"audio": 0, "start": 5558, "crunched": 0, "end": 5619, "filename": "/effects/GDFAS/0CEF0002.df"}, {"audio": 0, "start": 5619, "crunched": 0, "end": 5680, "filename": "/effects/GDFAS/00000025.df"}, {"audio": 0, "start": 5680, "crunched": 0, "end": 5742, "filename": "/effects/GDFAS/00000035.df"}, {"audio": 0, "start": 5742, "crunched": 0, "end": 5801, "filename": "/effects/GDFAS/00000097.df"}, {"audio": 0, "start": 5801, "crunched": 0, "end": 5857, "filename": "/effects/GDFAS/00000001.df"}, {"audio": 0, "start": 5857, "crunched": 0, "end": 5912, "filename": "/effects/GDFAS/0000001F.df"}, {"audio": 0, "start": 5912, "crunched": 0, "end": 5969, "filename": "/effects/GDFAS/0000002B.df"}, {"audio": 0, "start": 5969, "crunched": 0, "end": 6021, "filename": "/effects/GDFAS/0000000B.df"}, {"audio": 0, "start": 6021, "crunched": 0, "end": 6074, "filename": "/effects/GDFAS/0CEF0006.df"}, {"audio": 0, "start": 6074, "crunched": 0, "end": 6137, "filename": "/effects/GDFAS/00000021.df"}, {"audio": 0, "start": 6137, "crunched": 0, "end": 6196, "filename": "/effects/GDFAS/00000015.df"}, {"audio": 0, "start": 6196, "crunched": 0, "end": 6258, "filename": "/effects/GDFAS/00000005.df"}, {"audio": 0, "start": 6258, "crunched": 0, "end": 6321, "filename": "/effects/GDFAS/00000031.df"}, {"audio": 0, "start": 6321, "crunched": 0, "end": 6376, "filename": "/effects/GDFAS/0000002F.df"}, {"audio": 0, "start": 6376, "crunched": 0, "end": 6435, "filename": "/effects/GDFAS/0000001B.df"}, {"audio": 0, "start": 6435, "crunched": 0, "end": 6491, "filename": "/effects/GDFAS/0000000C.df"}, {"audio": 0, "start": 6491, "crunched": 0, "end": 6552, "filename": "/effects/GDFAS/00000020.df"}, {"audio": 0, "start": 6552, "crunched": 0, "end": 6612, "filename": "/effects/GDFAS/00000014.df"}, {"audio": 0, "start": 6612, "crunched": 0, "end": 6672, "filename": "/effects/GDFAS/00000004.df"}, {"audio": 0, "start": 6672, "crunched": 0, "end": 6732, "filename": "/effects/GDFAS/00000030.df"}, {"audio": 0, "start": 6732, "crunched": 0, "end": 6794, "filename": "/effects/GDFAS/0000001C.df"}, {"audio": 0, "start": 6794, "crunched": 0, "end": 6852, "filename": "/effects/GDFAS/0CEF0003.df"}, {"audio": 0, "start": 6852, "crunched": 0, "end": 6912, "filename": "/effects/GDFAS/00000024.df"}, {"audio": 0, "start": 6912, "crunched": 0, "end": 6972, "filename": "/effects/GDFAS/00000096.df"}, {"audio": 0, "start": 6972, "crunched": 0, "end": 7033, "filename": "/effects/GDFAS/00000000.df"}, {"audio": 0, "start": 7033, "crunched": 0, "end": 7094, "filename": "/effects/GDFAS/0000002C.df"}, {"audio": 0, "start": 7094, "crunched": 0, "end": 7193, "filename": "/effects/GTSAS/00000021.ts"}, {"audio": 0, "start": 7193, "crunched": 0, "end": 7283, "filename": "/effects/GTSAS/0000000B.ts"}, {"audio": 0, "start": 7283, "crunched": 0, "end": 7376, "filename": "/effects/GTSAS/0CEF0006.ts"}, {"audio": 0, "start": 7376, "crunched": 0, "end": 7489, "filename": "/effects/GTSAS/0000001B.ts"}, {"audio": 0, "start": 7489, "crunched": 0, "end": 7561, "filename": "/effects/GTSAS/00000005.ts"}, {"audio": 0, "start": 7561, "crunched": 0, "end": 7737, "filename": "/effects/GTSAS/00000025.ts"}, {"audio": 0, "start": 7737, "crunched": 0, "end": 7848, "filename": "/effects/GTSAS/0CEF0002.ts"}, {"audio": 0, "start": 7848, "crunched": 0, "end": 7968, "filename": "/effects/GTSAS/0000000F.ts"}, {"audio": 0, "start": 7968, "crunched": 0, "end": 8059, "filename": "/effects/GTSAS/0000001F.ts"}, {"audio": 0, "start": 8059, "crunched": 0, "end": 8120, "filename": "/effects/GTSAS/00000001.ts"}, {"audio": 0, "start": 8120, "crunched": 0, "end": 8201, "filename": "/effects/GTSAS/00000010.ts"}, {"audio": 0, "start": 8201, "crunched": 0, "end": 8347, "filename": "/effects/GTSAS/00000024.ts"}, {"audio": 0, "start": 8347, "crunched": 0, "end": 8422, "filename": "/effects/GTSAS/0CEF0003.ts"}, {"audio": 0, "start": 8422, "crunched": 0, "end": 8603, "filename": "/effects/GTSAS/00000000.ts"}, {"audio": 0, "start": 8603, "crunched": 0, "end": 8656, "filename": "/effects/GTSAS/00000020.ts"}, {"audio": 0, "start": 8656, "crunched": 0, "end": 8737, "filename": "/effects/GTSAS/0000000C.ts"}, {"audio": 0, "start": 8737, "crunched": 0, "end": 8797, "filename": "/effects/GTSAS/0CEF0007.ts"}, {"audio": 0, "start": 8797, "crunched": 0, "end": 8970, "filename": "/effects/GTSAS/0000001C.ts"}, {"audio": 0, "start": 8970, "crunched": 0, "end": 9042, "filename": "/effects/GTSAS/00000004.ts"}, {"audio": 0, "start": 9042, "crunched": 0, "end": 9151, "filename": "/effects/GTSAS/0CEF0008.ts"}, {"audio": 0, "start": 9151, "crunched": 0, "end": 9327, "filename": "/effects/GTSAS/00000019.ts"}, {"audio": 0, "start": 9327, "crunched": 0, "end": 9444, "filename": "/effects/GTSAS/00000009.ts"}, {"audio": 0, "start": 9444, "crunched": 0, "end": 9617, "filename": "/effects/GTSAS/00000018.ts"}, {"audio": 0, "start": 9617, "crunched": 0, "end": 9689, "filename": "/effects/GTSAS/00000008.ts"}, {"audio": 0, "start": 9689, "crunched": 0, "end": 9785, "filename": "/effects/GTSAS/0000000D.ts"}, {"audio": 0, "start": 9785, "crunched": 0, "end": 9966, "filename": "/effects/GTSAS/0000001D.ts"}, {"audio": 0, "start": 9966, "crunched": 0, "end": 10057, "filename": "/effects/GTSAS/00000003.ts"}, {"audio": 0, "start": 10057, "crunched": 0, "end": 10234, "filename": "/effects/GTSAS/00000023.ts"}, {"audio": 0, "start": 10234, "crunched": 0, "end": 10353, "filename": "/effects/GTSAS/0CEF0004.ts"}, {"audio": 0, "start": 10353, "crunched": 0, "end": 10449, "filename": "/effects/GTSAS/00000007.ts"}, {"audio": 0, "start": 10449, "crunched": 0, "end": 10530, "filename": "/effects/GTSAS/00000022.ts"}, {"audio": 0, "start": 10530, "crunched": 0, "end": 10592, "filename": "/effects/GTSAS/0000000A.ts"}, {"audio": 0, "start": 10592, "crunched": 0, "end": 10667, "filename": "/effects/GTSAS/0CEF0005.ts"}, {"audio": 0, "start": 10667, "crunched": 0, "end": 10778, "filename": "/effects/GTSAS/0000001A.ts"}, {"audio": 0, "start": 10778, "crunched": 0, "end": 10839, "filename": "/effects/GTSAS/0CEF0001.ts"}, {"audio": 0, "start": 10839, "crunched": 0, "end": 10923, "filename": "/effects/GTSAS/0000000E.ts"}, {"audio": 0, "start": 10923, "crunched": 0, "end": 10972, "filename": "/effects/GTSAS/0000001E.ts"}, {"audio": 0, "start": 10972, "crunched": 0, "end": 11034, "filename": "/effects/GTSAS/00000002.ts"}], "remote_package_size": 11034, "package_uuid": "a828125d-3071-4db8-860f-2f5e52502ec3"});
+ loadPackage({"files": [{"audio": 0, "start": 0, "crunched": 0, "end": 178, "filename": "/effects/GTMAS/00000019.tm"}, {"audio": 0, "start": 178, "crunched": 0, "end": 240, "filename": "/effects/GTMAS/00000009.tm"}, {"audio": 0, "start": 240, "crunched": 0, "end": 368, "filename": "/effects/GTMAS/00000018.tm"}, {"audio": 0, "start": 368, "crunched": 0, "end": 427, "filename": "/effects/GTMAS/00000008.tm"}, {"audio": 0, "start": 427, "crunched": 0, "end": 502, "filename": "/effects/GTMAS/0CEF0004.tm"}, {"audio": 0, "start": 502, "crunched": 0, "end": 877, "filename": "/effects/GTMAS/00000017.tm"}, {"audio": 0, "start": 877, "crunched": 0, "end": 946, "filename": "/effects/GTMAS/0000000D.tm"}, {"audio": 0, "start": 946, "crunched": 0, "end": 1006, "filename": "/effects/GTMAS/00000013.tm"}, {"audio": 0, "start": 1006, "crunched": 0, "end": 1066, "filename": "/effects/GTMAS/00000003.tm"}, {"audio": 0, "start": 1066, "crunched": 0, "end": 1210, "filename": "/effects/GTMAS/0000000E.tm"}, {"audio": 0, "start": 1210, "crunched": 0, "end": 1288, "filename": "/effects/GTMAS/0CEF0001.tm"}, {"audio": 0, "start": 1288, "crunched": 0, "end": 1358, "filename": "/effects/GTMAS/00000012.tm"}, {"audio": 0, "start": 1358, "crunched": 0, "end": 1698, "filename": "/effects/GTMAS/00000002.tm"}, {"audio": 0, "start": 1698, "crunched": 0, "end": 1760, "filename": "/effects/GTMAS/0000001E.tm"}, {"audio": 0, "start": 1760, "crunched": 0, "end": 1837, "filename": "/effects/GTMAS/0CEF0005.tm"}, {"audio": 0, "start": 1837, "crunched": 0, "end": 1896, "filename": "/effects/GTMAS/0000000A.tm"}, {"audio": 0, "start": 1896, "crunched": 0, "end": 1957, "filename": "/effects/GTMAS/00000016.tm"}, {"audio": 0, "start": 1957, "crunched": 0, "end": 2054, "filename": "/effects/GTMAS/0000001A.tm"}, {"audio": 0, "start": 2054, "crunched": 0, "end": 2111, "filename": "/effects/GTMAS/0000000F.tm"}, {"audio": 0, "start": 2111, "crunched": 0, "end": 2187, "filename": "/effects/GTMAS/0CEF0002.tm"}, {"audio": 0, "start": 2187, "crunched": 0, "end": 2344, "filename": "/effects/GTMAS/0000C350.tm"}, {"audio": 0, "start": 2344, "crunched": 0, "end": 2417, "filename": "/effects/GTMAS/00000011.tm"}, {"audio": 0, "start": 2417, "crunched": 0, "end": 2478, "filename": "/effects/GTMAS/00000001.tm"}, {"audio": 0, "start": 2478, "crunched": 0, "end": 2538, "filename": "/effects/GTMAS/0000001F.tm"}, {"audio": 0, "start": 2538, "crunched": 0, "end": 2610, "filename": "/effects/GTMAS/0000000B.tm"}, {"audio": 0, "start": 2610, "crunched": 0, "end": 2671, "filename": "/effects/GTMAS/00000015.tm"}, {"audio": 0, "start": 2671, "crunched": 0, "end": 2771, "filename": "/effects/GTMAS/0000001B.tm"}, {"audio": 0, "start": 2771, "crunched": 0, "end": 2856, "filename": "/effects/GTMAS/0000000C.tm"}, {"audio": 0, "start": 2856, "crunched": 0, "end": 3170, "filename": "/effects/GTMAS/00000020.tm"}, {"audio": 0, "start": 3170, "crunched": 0, "end": 3234, "filename": "/effects/GTMAS/0000001C.tm"}, {"audio": 0, "start": 3234, "crunched": 0, "end": 3300, "filename": "/effects/GTMAS/0CEF0003.tm"}, {"audio": 0, "start": 3300, "crunched": 0, "end": 3360, "filename": "/effects/GTMAS/00000010.tm"}, {"audio": 0, "start": 3360, "crunched": 0, "end": 3672, "filename": "/effects/GTMAS/00000000.tm"}, {"audio": 0, "start": 3672, "crunched": 0, "end": 3732, "filename": "/effects/GDFAS/0CEF0004.df"}, {"audio": 0, "start": 3732, "crunched": 0, "end": 3795, "filename": "/effects/GDFAS/00000023.df"}, {"audio": 0, "start": 3795, "crunched": 0, "end": 3858, "filename": "/effects/GDFAS/00000017.df"}, {"audio": 0, "start": 3858, "crunched": 0, "end": 3910, "filename": "/effects/GDFAS/00000007.df"}, {"audio": 0, "start": 3910, "crunched": 0, "end": 3972, "filename": "/effects/GDFAS/0000002D.df"}, {"audio": 0, "start": 3972, "crunched": 0, "end": 4033, "filename": "/effects/GDFAS/00000013.df"}, {"audio": 0, "start": 4033, "crunched": 0, "end": 4091, "filename": "/effects/GDFAS/00000027.df"}, {"audio": 0, "start": 4091, "crunched": 0, "end": 4145, "filename": "/effects/GDFAS/00000037.df"}, {"audio": 0, "start": 4145, "crunched": 0, "end": 4209, "filename": "/effects/GDFAS/00000003.df"}, {"audio": 0, "start": 4209, "crunched": 0, "end": 4270, "filename": "/effects/GDFAS/0000001D.df"}, {"audio": 0, "start": 4270, "crunched": 0, "end": 4331, "filename": "/effects/GDFAS/0CEF0001.df"}, {"audio": 0, "start": 4331, "crunched": 0, "end": 4387, "filename": "/effects/GDFAS/00000026.df"}, {"audio": 0, "start": 4387, "crunched": 0, "end": 4448, "filename": "/effects/GDFAS/00000036.df"}, {"audio": 0, "start": 4448, "crunched": 0, "end": 4530, "filename": "/effects/GDFAS/00000002.df"}, {"audio": 0, "start": 4530, "crunched": 0, "end": 4583, "filename": "/effects/GDFAS/0000001E.df"}, {"audio": 0, "start": 4583, "crunched": 0, "end": 4646, "filename": "/effects/GDFAS/0000002A.df"}, {"audio": 0, "start": 4646, "crunched": 0, "end": 4698, "filename": "/effects/GDFAS/0000000A.df"}, {"audio": 0, "start": 4698, "crunched": 0, "end": 4754, "filename": "/effects/GDFAS/0CEF0005.df"}, {"audio": 0, "start": 4754, "crunched": 0, "end": 4811, "filename": "/effects/GDFAS/00000022.df"}, {"audio": 0, "start": 4811, "crunched": 0, "end": 4871, "filename": "/effects/GDFAS/00000016.df"}, {"audio": 0, "start": 4871, "crunched": 0, "end": 4922, "filename": "/effects/GDFAS/00000006.df"}, {"audio": 0, "start": 4922, "crunched": 0, "end": 4987, "filename": "/effects/GDFAS/00000032.df"}, {"audio": 0, "start": 4987, "crunched": 0, "end": 5041, "filename": "/effects/GDFAS/0000002E.df"}, {"audio": 0, "start": 5041, "crunched": 0, "end": 5098, "filename": "/effects/GDFAS/0000001A.df"}, {"audio": 0, "start": 5098, "crunched": 0, "end": 5155, "filename": "/effects/GDFAS/00000029.df"}, {"audio": 0, "start": 5155, "crunched": 0, "end": 5217, "filename": "/effects/GDFAS/00000039.df"}, {"audio": 0, "start": 5217, "crunched": 0, "end": 5281, "filename": "/effects/GDFAS/00000019.df"}, {"audio": 0, "start": 5281, "crunched": 0, "end": 5333, "filename": "/effects/GDFAS/00000009.df"}, {"audio": 0, "start": 5333, "crunched": 0, "end": 5396, "filename": "/effects/GDFAS/00000018.df"}, {"audio": 0, "start": 5396, "crunched": 0, "end": 5448, "filename": "/effects/GDFAS/00000008.df"}, {"audio": 0, "start": 5448, "crunched": 0, "end": 5505, "filename": "/effects/GDFAS/00000028.df"}, {"audio": 0, "start": 5505, "crunched": 0, "end": 5558, "filename": "/effects/GDFAS/00000038.df"}, {"audio": 0, "start": 5558, "crunched": 0, "end": 5619, "filename": "/effects/GDFAS/0CEF0002.df"}, {"audio": 0, "start": 5619, "crunched": 0, "end": 5680, "filename": "/effects/GDFAS/00000025.df"}, {"audio": 0, "start": 5680, "crunched": 0, "end": 5742, "filename": "/effects/GDFAS/00000035.df"}, {"audio": 0, "start": 5742, "crunched": 0, "end": 5801, "filename": "/effects/GDFAS/00000097.df"}, {"audio": 0, "start": 5801, "crunched": 0, "end": 5857, "filename": "/effects/GDFAS/00000001.df"}, {"audio": 0, "start": 5857, "crunched": 0, "end": 5912, "filename": "/effects/GDFAS/0000001F.df"}, {"audio": 0, "start": 5912, "crunched": 0, "end": 5969, "filename": "/effects/GDFAS/0000002B.df"}, {"audio": 0, "start": 5969, "crunched": 0, "end": 6021, "filename": "/effects/GDFAS/0000000B.df"}, {"audio": 0, "start": 6021, "crunched": 0, "end": 6074, "filename": "/effects/GDFAS/0CEF0006.df"}, {"audio": 0, "start": 6074, "crunched": 0, "end": 6137, "filename": "/effects/GDFAS/00000021.df"}, {"audio": 0, "start": 6137, "crunched": 0, "end": 6196, "filename": "/effects/GDFAS/00000015.df"}, {"audio": 0, "start": 6196, "crunched": 0, "end": 6258, "filename": "/effects/GDFAS/00000005.df"}, {"audio": 0, "start": 6258, "crunched": 0, "end": 6321, "filename": "/effects/GDFAS/00000031.df"}, {"audio": 0, "start": 6321, "crunched": 0, "end": 6376, "filename": "/effects/GDFAS/0000002F.df"}, {"audio": 0, "start": 6376, "crunched": 0, "end": 6435, "filename": "/effects/GDFAS/0000001B.df"}, {"audio": 0, "start": 6435, "crunched": 0, "end": 6491, "filename": "/effects/GDFAS/0000000C.df"}, {"audio": 0, "start": 6491, "crunched": 0, "end": 6552, "filename": "/effects/GDFAS/00000020.df"}, {"audio": 0, "start": 6552, "crunched": 0, "end": 6612, "filename": "/effects/GDFAS/00000014.df"}, {"audio": 0, "start": 6612, "crunched": 0, "end": 6672, "filename": "/effects/GDFAS/00000004.df"}, {"audio": 0, "start": 6672, "crunched": 0, "end": 6732, "filename": "/effects/GDFAS/00000030.df"}, {"audio": 0, "start": 6732, "crunched": 0, "end": 6794, "filename": "/effects/GDFAS/0000001C.df"}, {"audio": 0, "start": 6794, "crunched": 0, "end": 6852, "filename": "/effects/GDFAS/0CEF0003.df"}, {"audio": 0, "start": 6852, "crunched": 0, "end": 6912, "filename": "/effects/GDFAS/00000024.df"}, {"audio": 0, "start": 6912, "crunched": 0, "end": 6972, "filename": "/effects/GDFAS/00000096.df"}, {"audio": 0, "start": 6972, "crunched": 0, "end": 7033, "filename": "/effects/GDFAS/00000000.df"}, {"audio": 0, "start": 7033, "crunched": 0, "end": 7094, "filename": "/effects/GDFAS/0000002C.df"}, {"audio": 0, "start": 7094, "crunched": 0, "end": 7193, "filename": "/effects/GTSAS/00000021.ts"}, {"audio": 0, "start": 7193, "crunched": 0, "end": 7283, "filename": "/effects/GTSAS/0000000B.ts"}, {"audio": 0, "start": 7283, "crunched": 0, "end": 7376, "filename": "/effects/GTSAS/0CEF0006.ts"}, {"audio": 0, "start": 7376, "crunched": 0, "end": 7489, "filename": "/effects/GTSAS/0000001B.ts"}, {"audio": 0, "start": 7489, "crunched": 0, "end": 7561, "filename": "/effects/GTSAS/00000005.ts"}, {"audio": 0, "start": 7561, "crunched": 0, "end": 7737, "filename": "/effects/GTSAS/00000025.ts"}, {"audio": 0, "start": 7737, "crunched": 0, "end": 7848, "filename": "/effects/GTSAS/0CEF0002.ts"}, {"audio": 0, "start": 7848, "crunched": 0, "end": 7968, "filename": "/effects/GTSAS/0000000F.ts"}, {"audio": 0, "start": 7968, "crunched": 0, "end": 8059, "filename": "/effects/GTSAS/0000001F.ts"}, {"audio": 0, "start": 8059, "crunched": 0, "end": 8120, "filename": "/effects/GTSAS/00000001.ts"}, {"audio": 0, "start": 8120, "crunched": 0, "end": 8201, "filename": "/effects/GTSAS/00000010.ts"}, {"audio": 0, "start": 8201, "crunched": 0, "end": 8347, "filename": "/effects/GTSAS/00000024.ts"}, {"audio": 0, "start": 8347, "crunched": 0, "end": 8422, "filename": "/effects/GTSAS/0CEF0003.ts"}, {"audio": 0, "start": 8422, "crunched": 0, "end": 8603, "filename": "/effects/GTSAS/00000000.ts"}, {"audio": 0, "start": 8603, "crunched": 0, "end": 8656, "filename": "/effects/GTSAS/00000020.ts"}, {"audio": 0, "start": 8656, "crunched": 0, "end": 8737, "filename": "/effects/GTSAS/0000000C.ts"}, {"audio": 0, "start": 8737, "crunched": 0, "end": 8797, "filename": "/effects/GTSAS/0CEF0007.ts"}, {"audio": 0, "start": 8797, "crunched": 0, "end": 8970, "filename": "/effects/GTSAS/0000001C.ts"}, {"audio": 0, "start": 8970, "crunched": 0, "end": 9042, "filename": "/effects/GTSAS/00000004.ts"}, {"audio": 0, "start": 9042, "crunched": 0, "end": 9151, "filename": "/effects/GTSAS/0CEF0008.ts"}, {"audio": 0, "start": 9151, "crunched": 0, "end": 9327, "filename": "/effects/GTSAS/00000019.ts"}, {"audio": 0, "start": 9327, "crunched": 0, "end": 9444, "filename": "/effects/GTSAS/00000009.ts"}, {"audio": 0, "start": 9444, "crunched": 0, "end": 9617, "filename": "/effects/GTSAS/00000018.ts"}, {"audio": 0, "start": 9617, "crunched": 0, "end": 9689, "filename": "/effects/GTSAS/00000008.ts"}, {"audio": 0, "start": 9689, "crunched": 0, "end": 9785, "filename": "/effects/GTSAS/0000000D.ts"}, {"audio": 0, "start": 9785, "crunched": 0, "end": 9966, "filename": "/effects/GTSAS/0000001D.ts"}, {"audio": 0, "start": 9966, "crunched": 0, "end": 10057, "filename": "/effects/GTSAS/00000003.ts"}, {"audio": 0, "start": 10057, "crunched": 0, "end": 10234, "filename": "/effects/GTSAS/00000023.ts"}, {"audio": 0, "start": 10234, "crunched": 0, "end": 10353, "filename": "/effects/GTSAS/0CEF0004.ts"}, {"audio": 0, "start": 10353, "crunched": 0, "end": 10449, "filename": "/effects/GTSAS/00000007.ts"}, {"audio": 0, "start": 10449, "crunched": 0, "end": 10530, "filename": "/effects/GTSAS/00000022.ts"}, {"audio": 0, "start": 10530, "crunched": 0, "end": 10592, "filename": "/effects/GTSAS/0000000A.ts"}, {"audio": 0, "start": 10592, "crunched": 0, "end": 10667, "filename": "/effects/GTSAS/0CEF0005.ts"}, {"audio": 0, "start": 10667, "crunched": 0, "end": 10778, "filename": "/effects/GTSAS/0000001A.ts"}, {"audio": 0, "start": 10778, "crunched": 0, "end": 10839, "filename": "/effects/GTSAS/0CEF0001.ts"}, {"audio": 0, "start": 10839, "crunched": 0, "end": 10923, "filename": "/effects/GTSAS/0000000E.ts"}, {"audio": 0, "start": 10923, "crunched": 0, "end": 10972, "filename": "/effects/GTSAS/0000001E.ts"}, {"audio": 0, "start": 10972, "crunched": 0, "end": 11034, "filename": "/effects/GTSAS/00000002.ts"}], "remote_package_size": 11034, "package_uuid": "1049b89b-693f-4f0b-8f6e-b77e63888b95"});
 
 })();
 
@@ -1970,7 +1970,7 @@ function _emscripten_asm_const_ii(code, a0) {
 
 STATIC_BASE = GLOBAL_BASE;
 
-STATICTOP = STATIC_BASE + 50304;
+STATICTOP = STATIC_BASE + 51168;
 /* global initializers */  __ATINIT__.push({ func: function() { __GLOBAL__I_000101() } }, { func: function() { __GLOBAL__sub_I_main_cpp() } }, { func: function() { __GLOBAL__sub_I_web_bind_cpp() } }, { func: function() { __GLOBAL__sub_I_Geometry_cpp() } }, { func: function() { __GLOBAL__sub_I_BkwObject_cpp() } }, { func: function() { __GLOBAL__sub_I_Context_cpp() } }, { func: function() { __GLOBAL__sub_I_bind_cpp() } }, { func: function() { __GLOBAL__sub_I_iostream_cpp() } });
 
 
@@ -1979,7 +1979,7 @@ STATICTOP = STATIC_BASE + 50304;
 
 
 
-var STATIC_BUMP = 50304;
+var STATIC_BUMP = 51168;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 
@@ -6482,6 +6482,61 @@ function copyTempDouble(ptr) {
     }
 
   
+  function heap32VectorToArray(count, firstElement) {
+      var array = [];
+      for (var i = 0; i < count; i++) {
+          array.push(HEAP32[(firstElement >> 2) + i]);
+      }
+      return array;
+    }function __embind_register_class_constructor(
+      rawClassType,
+      argCount,
+      rawArgTypesAddr,
+      invokerSignature,
+      invoker,
+      rawConstructor
+    ) {
+      var rawArgTypes = heap32VectorToArray(argCount, rawArgTypesAddr);
+      invoker = embind__requireFunction(invokerSignature, invoker);
+  
+      whenDependentTypesAreResolved([], [rawClassType], function(classType) {
+          classType = classType[0];
+          var humanName = 'constructor ' + classType.name;
+  
+          if (undefined === classType.registeredClass.constructor_body) {
+              classType.registeredClass.constructor_body = [];
+          }
+          if (undefined !== classType.registeredClass.constructor_body[argCount - 1]) {
+              throw new BindingError("Cannot register multiple constructors with identical number of parameters (" + (argCount-1) + ") for class '" + classType.name + "'! Overload resolution is currently only performed using the parameter count, not actual type info!");
+          }
+          classType.registeredClass.constructor_body[argCount - 1] = function unboundTypeHandler() {
+              throwUnboundTypeError('Cannot construct ' + classType.name + ' due to unbound types', rawArgTypes);
+          };
+  
+          whenDependentTypesAreResolved([], rawArgTypes, function(argTypes) {
+              classType.registeredClass.constructor_body[argCount - 1] = function constructor_body() {
+                  if (arguments.length !== argCount - 1) {
+                      throwBindingError(humanName + ' called with ' + arguments.length + ' arguments, expected ' + (argCount-1));
+                  }
+                  var destructors = [];
+                  var args = new Array(argCount);
+                  args[0] = rawConstructor;
+                  for (var i = 1; i < argCount; ++i) {
+                      args[i] = argTypes[i]['toWireType'](destructors, arguments[i - 1]);
+                  }
+  
+                  var ptr = invoker.apply(null, args);
+                  runDestructors(destructors);
+  
+                  return argTypes[0]['fromWireType'](ptr);
+              };
+              return [];
+          });
+          return [];
+      });
+    }
+
+  
   
   function new_(constructor, argumentList) {
       if (!(constructor instanceof Function)) {
@@ -6606,14 +6661,6 @@ function copyTempDouble(ptr) {
   
       var invokerFunction = new_(Function, args1).apply(null, args2);
       return invokerFunction;
-    }
-  
-  function heap32VectorToArray(count, firstElement) {
-      var array = [];
-      for (var i = 0; i < count; i++) {
-          array.push(HEAP32[(firstElement >> 2) + i]);
-      }
-      return array;
     }function __embind_register_class_function(
       rawClassType,
       methodName,
@@ -6669,6 +6716,92 @@ function copyTempDouble(ptr) {
   
               return [];
           });
+          return [];
+      });
+    }
+
+  
+  function validateThis(this_, classType, humanName) {
+      if (!(this_ instanceof Object)) {
+          throwBindingError(humanName + ' with invalid "this": ' + this_);
+      }
+      if (!(this_ instanceof classType.registeredClass.constructor)) {
+          throwBindingError(humanName + ' incompatible with "this" of type ' + this_.constructor.name);
+      }
+      if (!this_.$$.ptr) {
+          throwBindingError('cannot call emscripten binding method ' + humanName + ' on deleted object');
+      }
+  
+      // todo: kill this
+      return upcastPointer(
+          this_.$$.ptr,
+          this_.$$.ptrType.registeredClass,
+          classType.registeredClass);
+    }function __embind_register_class_property(
+      classType,
+      fieldName,
+      getterReturnType,
+      getterSignature,
+      getter,
+      getterContext,
+      setterArgumentType,
+      setterSignature,
+      setter,
+      setterContext
+    ) {
+      fieldName = readLatin1String(fieldName);
+      getter = embind__requireFunction(getterSignature, getter);
+  
+      whenDependentTypesAreResolved([], [classType], function(classType) {
+          classType = classType[0];
+          var humanName = classType.name + '.' + fieldName;
+          var desc = {
+              get: function() {
+                  throwUnboundTypeError('Cannot access ' + humanName + ' due to unbound types', [getterReturnType, setterArgumentType]);
+              },
+              enumerable: true,
+              configurable: true
+          };
+          if (setter) {
+              desc.set = function() {
+                  throwUnboundTypeError('Cannot access ' + humanName + ' due to unbound types', [getterReturnType, setterArgumentType]);
+              };
+          } else {
+              desc.set = function(v) {
+                  throwBindingError(humanName + ' is a read-only property');
+              };
+          }
+  
+          Object.defineProperty(classType.registeredClass.instancePrototype, fieldName, desc);
+  
+          whenDependentTypesAreResolved(
+              [],
+              (setter ? [getterReturnType, setterArgumentType] : [getterReturnType]),
+          function(types) {
+              var getterReturnType = types[0];
+              var desc = {
+                  get: function() {
+                      var ptr = validateThis(this, classType, humanName + ' getter');
+                      return getterReturnType['fromWireType'](getter(getterContext, ptr));
+                  },
+                  enumerable: true
+              };
+  
+              if (setter) {
+                  setter = embind__requireFunction(setterSignature, setter);
+                  var setterArgumentType = types[1];
+                  desc.set = function(v) {
+                      var ptr = validateThis(this, classType, humanName + ' setter');
+                      var destructors = [];
+                      setter(setterContext, ptr, setterArgumentType['toWireType'](destructors, v));
+                      runDestructors(destructors);
+                  };
+              }
+  
+              Object.defineProperty(classType.registeredClass.instancePrototype, fieldName, desc);
+              return [];
+          });
+  
           return [];
       });
     }
@@ -6896,6 +7029,46 @@ function copyTempDouble(ptr) {
       });
     }
 
+  function __embind_register_smart_ptr(
+      rawType,
+      rawPointeeType,
+      name,
+      sharingPolicy,
+      getPointeeSignature,
+      rawGetPointee,
+      constructorSignature,
+      rawConstructor,
+      shareSignature,
+      rawShare,
+      destructorSignature,
+      rawDestructor
+    ) {
+      name = readLatin1String(name);
+      rawGetPointee = embind__requireFunction(getPointeeSignature, rawGetPointee);
+      rawConstructor = embind__requireFunction(constructorSignature, rawConstructor);
+      rawShare = embind__requireFunction(shareSignature, rawShare);
+      rawDestructor = embind__requireFunction(destructorSignature, rawDestructor);
+  
+      whenDependentTypesAreResolved([rawType], [rawPointeeType], function(pointeeType) {
+          pointeeType = pointeeType[0];
+  
+          var registeredPointer = new RegisteredPointer(
+              name,
+              pointeeType.registeredClass,
+              false,
+              false,
+              // smart pointer properties
+              true,
+              pointeeType,
+              sharingPolicy,
+              rawGetPointee,
+              rawConstructor,
+              rawShare,
+              rawDestructor);
+          return [registeredPointer];
+      });
+    }
+
   function __embind_register_std_string(rawType, name) {
       name = readLatin1String(name);
       registerType(rawType, {
@@ -7054,6 +7227,57 @@ function copyTempDouble(ptr) {
               return undefined;
           },
       });
+    }
+
+  
+  
+  function requireRegisteredType(rawType, humanName) {
+      var impl = registeredTypes[rawType];
+      if (undefined === impl) {
+          throwBindingError(humanName + " has unknown type " + getTypeName(rawType));
+      }
+      return impl;
+    }function __emval_lookupTypes(argCount, argTypes, argWireTypes) {
+      var a = new Array(argCount);
+      for (var i = 0; i < argCount; ++i) {
+          a[i] = requireRegisteredType(
+              HEAP32[(argTypes >> 2) + i],
+              "parameter " + i);
+      }
+      return a;
+    }
+  
+  function requireHandle(handle) {
+      if (!handle) {
+          throwBindingError('Cannot use deleted val. handle = ' + handle);
+      }
+      return emval_handle_array[handle].value;
+    }function __emval_call(handle, argCount, argTypes, argv) {
+      handle = requireHandle(handle);
+      var types = __emval_lookupTypes(argCount, argTypes);
+  
+      var args = new Array(argCount);
+      for (var i = 0; i < argCount; ++i) {
+          var type = types[i];
+          args[i] = type['readValueFromPointer'](argv);
+          argv += type['argPackAdvance'];
+      }
+  
+      var rv = handle.apply(undefined, args);
+      return __emval_register(rv);
+    }
+
+
+  function __emval_incref(handle) {
+      if (handle > 4) {
+          emval_handle_array[handle].refcount += 1;
+      }
+    }
+
+  function __emval_take_value(type, argv) {
+      type = requireRegisteredType(type, '_emval_take_value');
+      var v = type['readValueFromPointer'](argv);
+      return __emval_register(v);
     }
 
   function _abort() {
@@ -11537,6 +11761,8 @@ function nullFunc_diii(x) { Module["printErr"]("Invalid function pointer called 
 
 function nullFunc_ff(x) { Module["printErr"]("Invalid function pointer called with signature 'ff'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
+function nullFunc_fii(x) { Module["printErr"]("Invalid function pointer called with signature 'fii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
+
 function nullFunc_fiii(x) { Module["printErr"]("Invalid function pointer called with signature 'fiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
 function nullFunc_i(x) { Module["printErr"]("Invalid function pointer called with signature 'i'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
@@ -11544,6 +11770,8 @@ function nullFunc_i(x) { Module["printErr"]("Invalid function pointer called wit
 function nullFunc_ii(x) { Module["printErr"]("Invalid function pointer called with signature 'ii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
 function nullFunc_iii(x) { Module["printErr"]("Invalid function pointer called with signature 'iii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
+
+function nullFunc_iiiffi(x) { Module["printErr"]("Invalid function pointer called with signature 'iiiffi'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
 function nullFunc_iiii(x) { Module["printErr"]("Invalid function pointer called with signature 'iiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
@@ -11613,6 +11841,8 @@ function nullFunc_viifff(x) { Module["printErr"]("Invalid function pointer calle
 
 function nullFunc_viiffff(x) { Module["printErr"]("Invalid function pointer called with signature 'viiffff'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
+function nullFunc_viiffi(x) { Module["printErr"]("Invalid function pointer called with signature 'viiffi'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
+
 function nullFunc_viii(x) { Module["printErr"]("Invalid function pointer called with signature 'viii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
 function nullFunc_viiii(x) { Module["printErr"]("Invalid function pointer called with signature 'viiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
@@ -11629,9 +11859,9 @@ function nullFunc_viiiiiiiiiiiiiii(x) { Module["printErr"]("Invalid function poi
 
 function nullFunc_viijii(x) { Module["printErr"]("Invalid function pointer called with signature 'viijii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");  Module["printErr"]("Build with ASSERTIONS=2 for more info.");abort(x) }
 
-Module['wasmTableSize'] = 46336;
+Module['wasmTableSize'] = 49408;
 
-Module['wasmMaxTableSize'] = 46336;
+Module['wasmMaxTableSize'] = 49408;
 
 function invoke_diii(index,a1,a2,a3) {
   try {
@@ -11645,6 +11875,15 @@ function invoke_diii(index,a1,a2,a3) {
 function invoke_ff(index,a1) {
   try {
     return Module["dynCall_ff"](index,a1);
+  } catch(e) {
+    if (typeof e !== 'number' && e !== 'longjmp') throw e;
+    Module["setThrew"](1, 0);
+  }
+}
+
+function invoke_fii(index,a1,a2) {
+  try {
+    return Module["dynCall_fii"](index,a1,a2);
   } catch(e) {
     if (typeof e !== 'number' && e !== 'longjmp') throw e;
     Module["setThrew"](1, 0);
@@ -11681,6 +11920,15 @@ function invoke_ii(index,a1) {
 function invoke_iii(index,a1,a2) {
   try {
     return Module["dynCall_iii"](index,a1,a2);
+  } catch(e) {
+    if (typeof e !== 'number' && e !== 'longjmp') throw e;
+    Module["setThrew"](1, 0);
+  }
+}
+
+function invoke_iiiffi(index,a1,a2,a3,a4,a5) {
+  try {
+    return Module["dynCall_iiiffi"](index,a1,a2,a3,a4,a5);
   } catch(e) {
     if (typeof e !== 'number' && e !== 'longjmp') throw e;
     Module["setThrew"](1, 0);
@@ -11993,6 +12241,15 @@ function invoke_viiffff(index,a1,a2,a3,a4,a5,a6) {
   }
 }
 
+function invoke_viiffi(index,a1,a2,a3,a4,a5) {
+  try {
+    Module["dynCall_viiffi"](index,a1,a2,a3,a4,a5);
+  } catch(e) {
+    if (typeof e !== 'number' && e !== 'longjmp') throw e;
+    Module["setThrew"](1, 0);
+  }
+}
+
 function invoke_viii(index,a1,a2,a3) {
   try {
     Module["dynCall_viii"](index,a1,a2,a3);
@@ -12067,7 +12324,7 @@ function invoke_viijii(index,a1,a2,a3,a4,a5,a6) {
 
 Module.asmGlobalArg = {};
 
-Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_diii": nullFunc_diii, "nullFunc_ff": nullFunc_ff, "nullFunc_fiii": nullFunc_fiii, "nullFunc_i": nullFunc_i, "nullFunc_ii": nullFunc_ii, "nullFunc_iii": nullFunc_iii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_iiiii": nullFunc_iiiii, "nullFunc_iiiiid": nullFunc_iiiiid, "nullFunc_iiiiii": nullFunc_iiiiii, "nullFunc_iiiiiid": nullFunc_iiiiiid, "nullFunc_iiiiiii": nullFunc_iiiiiii, "nullFunc_iiiiiiii": nullFunc_iiiiiiii, "nullFunc_iiiiiiiii": nullFunc_iiiiiiiii, "nullFunc_iiiiiiiiiii": nullFunc_iiiiiiiiiii, "nullFunc_iiiiiiiiiiii": nullFunc_iiiiiiiiiiii, "nullFunc_iiiiiiiiiiiii": nullFunc_iiiiiiiiiiiii, "nullFunc_iiiiij": nullFunc_iiiiij, "nullFunc_jiiii": nullFunc_jiiii, "nullFunc_v": nullFunc_v, "nullFunc_vf": nullFunc_vf, "nullFunc_vfff": nullFunc_vfff, "nullFunc_vffff": nullFunc_vffff, "nullFunc_vfffii": nullFunc_vfffii, "nullFunc_vfii": nullFunc_vfii, "nullFunc_vi": nullFunc_vi, "nullFunc_vidd": nullFunc_vidd, "nullFunc_vif": nullFunc_vif, "nullFunc_viff": nullFunc_viff, "nullFunc_vifff": nullFunc_vifff, "nullFunc_viffff": nullFunc_viffff, "nullFunc_viffffff": nullFunc_viffffff, "nullFunc_vifffii": nullFunc_vifffii, "nullFunc_viffi": nullFunc_viffi, "nullFunc_vifi": nullFunc_vifi, "nullFunc_vifii": nullFunc_vifii, "nullFunc_vii": nullFunc_vii, "nullFunc_viif": nullFunc_viif, "nullFunc_viifff": nullFunc_viifff, "nullFunc_viiffff": nullFunc_viiffff, "nullFunc_viii": nullFunc_viii, "nullFunc_viiii": nullFunc_viiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viiiiii": nullFunc_viiiiii, "nullFunc_viiiiiii": nullFunc_viiiiiii, "nullFunc_viiiiiiiiii": nullFunc_viiiiiiiiii, "nullFunc_viiiiiiiiiiiiiii": nullFunc_viiiiiiiiiiiiiii, "nullFunc_viijii": nullFunc_viijii, "invoke_diii": invoke_diii, "invoke_ff": invoke_ff, "invoke_fiii": invoke_fiii, "invoke_i": invoke_i, "invoke_ii": invoke_ii, "invoke_iii": invoke_iii, "invoke_iiii": invoke_iiii, "invoke_iiiii": invoke_iiiii, "invoke_iiiiid": invoke_iiiiid, "invoke_iiiiii": invoke_iiiiii, "invoke_iiiiiid": invoke_iiiiiid, "invoke_iiiiiii": invoke_iiiiiii, "invoke_iiiiiiii": invoke_iiiiiiii, "invoke_iiiiiiiii": invoke_iiiiiiiii, "invoke_iiiiiiiiiii": invoke_iiiiiiiiiii, "invoke_iiiiiiiiiiii": invoke_iiiiiiiiiiii, "invoke_iiiiiiiiiiiii": invoke_iiiiiiiiiiiii, "invoke_iiiiij": invoke_iiiiij, "invoke_jiiii": invoke_jiiii, "invoke_v": invoke_v, "invoke_vf": invoke_vf, "invoke_vfff": invoke_vfff, "invoke_vffff": invoke_vffff, "invoke_vfffii": invoke_vfffii, "invoke_vfii": invoke_vfii, "invoke_vi": invoke_vi, "invoke_vidd": invoke_vidd, "invoke_vif": invoke_vif, "invoke_viff": invoke_viff, "invoke_vifff": invoke_vifff, "invoke_viffff": invoke_viffff, "invoke_viffffff": invoke_viffffff, "invoke_vifffii": invoke_vifffii, "invoke_viffi": invoke_viffi, "invoke_vifi": invoke_vifi, "invoke_vifii": invoke_vifii, "invoke_vii": invoke_vii, "invoke_viif": invoke_viif, "invoke_viifff": invoke_viifff, "invoke_viiffff": invoke_viiffff, "invoke_viii": invoke_viii, "invoke_viiii": invoke_viiii, "invoke_viiiii": invoke_viiiii, "invoke_viiiiii": invoke_viiiiii, "invoke_viiiiiii": invoke_viiiiiii, "invoke_viiiiiiiiii": invoke_viiiiiiiiii, "invoke_viiiiiiiiiiiiiii": invoke_viiiiiiiiiiiiiii, "invoke_viijii": invoke_viijii, "ClassHandle": ClassHandle, "ClassHandle_clone": ClassHandle_clone, "ClassHandle_delete": ClassHandle_delete, "ClassHandle_deleteLater": ClassHandle_deleteLater, "ClassHandle_isAliasOf": ClassHandle_isAliasOf, "ClassHandle_isDeleted": ClassHandle_isDeleted, "RegisteredClass": RegisteredClass, "RegisteredPointer": RegisteredPointer, "RegisteredPointer_deleteObject": RegisteredPointer_deleteObject, "RegisteredPointer_destructor": RegisteredPointer_destructor, "RegisteredPointer_fromWireType": RegisteredPointer_fromWireType, "RegisteredPointer_getPointee": RegisteredPointer_getPointee, "__ZSt18uncaught_exceptionv": __ZSt18uncaught_exceptionv, "___assert_fail": ___assert_fail, "___buildEnvironment": ___buildEnvironment, "___cxa_allocate_exception": ___cxa_allocate_exception, "___cxa_begin_catch": ___cxa_begin_catch, "___cxa_end_catch": ___cxa_end_catch, "___cxa_find_matching_catch": ___cxa_find_matching_catch, "___cxa_find_matching_catch_2": ___cxa_find_matching_catch_2, "___cxa_find_matching_catch_3": ___cxa_find_matching_catch_3, "___cxa_free_exception": ___cxa_free_exception, "___cxa_pure_virtual": ___cxa_pure_virtual, "___cxa_rethrow": ___cxa_rethrow, "___cxa_throw": ___cxa_throw, "___gxx_personality_v0": ___gxx_personality_v0, "___lock": ___lock, "___map_file": ___map_file, "___resumeException": ___resumeException, "___setErrNo": ___setErrNo, "___syscall140": ___syscall140, "___syscall145": ___syscall145, "___syscall146": ___syscall146, "___syscall221": ___syscall221, "___syscall5": ___syscall5, "___syscall54": ___syscall54, "___syscall6": ___syscall6, "___syscall91": ___syscall91, "___unlock": ___unlock, "__addDays": __addDays, "__arraySum": __arraySum, "__embind_finalize_value_object": __embind_finalize_value_object, "__embind_register_bool": __embind_register_bool, "__embind_register_class": __embind_register_class, "__embind_register_class_function": __embind_register_class_function, "__embind_register_emval": __embind_register_emval, "__embind_register_float": __embind_register_float, "__embind_register_function": __embind_register_function, "__embind_register_integer": __embind_register_integer, "__embind_register_memory_view": __embind_register_memory_view, "__embind_register_std_string": __embind_register_std_string, "__embind_register_std_wstring": __embind_register_std_wstring, "__embind_register_value_object": __embind_register_value_object, "__embind_register_value_object_field": __embind_register_value_object_field, "__embind_register_void": __embind_register_void, "__emscripten_fetch_cache_data": __emscripten_fetch_cache_data, "__emscripten_fetch_delete_cached_data": __emscripten_fetch_delete_cached_data, "__emscripten_fetch_load_cached_data": __emscripten_fetch_load_cached_data, "__emscripten_fetch_xhr": __emscripten_fetch_xhr, "__emscripten_get_fetch_work_queue": __emscripten_get_fetch_work_queue, "__emval_decref": __emval_decref, "__emval_register": __emval_register, "__exit": __exit, "__isLeapYear": __isLeapYear, "_abort": _abort, "_embind_repr": _embind_repr, "_emscripten_asm_const_ii": _emscripten_asm_const_ii, "_emscripten_get_element_css_size": _emscripten_get_element_css_size, "_emscripten_get_now": _emscripten_get_now, "_emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "_emscripten_is_main_runtime_thread": _emscripten_is_main_runtime_thread, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_emscripten_start_fetch": _emscripten_start_fetch, "_exit": _exit, "_getenv": _getenv, "_glActiveTexture": _glActiveTexture, "_glAttachShader": _glAttachShader, "_glBindAttribLocation": _glBindAttribLocation, "_glBindBuffer": _glBindBuffer, "_glBindTexture": _glBindTexture, "_glBlendFunc": _glBlendFunc, "_glBufferData": _glBufferData, "_glClear": _glClear, "_glClearColor": _glClearColor, "_glCompileShader": _glCompileShader, "_glCompressedTexImage2D": _glCompressedTexImage2D, "_glCreateProgram": _glCreateProgram, "_glCreateShader": _glCreateShader, "_glCullFace": _glCullFace, "_glDeleteBuffers": _glDeleteBuffers, "_glDeleteProgram": _glDeleteProgram, "_glDeleteShader": _glDeleteShader, "_glDeleteTextures": _glDeleteTextures, "_glDepthFunc": _glDepthFunc, "_glDepthMask": _glDepthMask, "_glDisable": _glDisable, "_glDrawElements": _glDrawElements, "_glEnable": _glEnable, "_glEnableVertexAttribArray": _glEnableVertexAttribArray, "_glFrontFace": _glFrontFace, "_glGenBuffers": _glGenBuffers, "_glGenTextures": _glGenTextures, "_glGetProgramInfoLog": _glGetProgramInfoLog, "_glGetProgramiv": _glGetProgramiv, "_glGetShaderInfoLog": _glGetShaderInfoLog, "_glGetShaderiv": _glGetShaderiv, "_glGetUniformLocation": _glGetUniformLocation, "_glIsBuffer": _glIsBuffer, "_glIsProgram": _glIsProgram, "_glIsTexture": _glIsTexture, "_glLinkProgram": _glLinkProgram, "_glPixelStorei": _glPixelStorei, "_glShaderSource": _glShaderSource, "_glTexImage2D": _glTexImage2D, "_glTexParameteri": _glTexParameteri, "_glUniform1f": _glUniform1f, "_glUniform1i": _glUniform1i, "_glUniform3f": _glUniform3f, "_glUniform4f": _glUniform4f, "_glUniformMatrix4fv": _glUniformMatrix4fv, "_glUseProgram": _glUseProgram, "_glVertexAttribPointer": _glVertexAttribPointer, "_glViewport": _glViewport, "_glfwCreateWindow": _glfwCreateWindow, "_glfwDestroyWindow": _glfwDestroyWindow, "_glfwGetCursorPos": _glfwGetCursorPos, "_glfwGetFramebufferSize": _glfwGetFramebufferSize, "_glfwGetTime": _glfwGetTime, "_glfwGetVersion": _glfwGetVersion, "_glfwGetWindowSize": _glfwGetWindowSize, "_glfwInit": _glfwInit, "_glfwMakeContextCurrent": _glfwMakeContextCurrent, "_glfwPollEvents": _glfwPollEvents, "_glfwSetCursorEnterCallback": _glfwSetCursorEnterCallback, "_glfwSetCursorPosCallback": _glfwSetCursorPosCallback, "_glfwSetFramebufferSizeCallback": _glfwSetFramebufferSizeCallback, "_glfwSetKeyCallback": _glfwSetKeyCallback, "_glfwSetMouseButtonCallback": _glfwSetMouseButtonCallback, "_glfwSetWindowSizeCallback": _glfwSetWindowSizeCallback, "_glfwSwapBuffers": _glfwSwapBuffers, "_glfwTerminate": _glfwTerminate, "_glfwWindowHint": _glfwWindowHint, "_llvm_fabs_f32": _llvm_fabs_f32, "_llvm_trap": _llvm_trap, "_pthread_cond_wait": _pthread_cond_wait, "_pthread_getspecific": _pthread_getspecific, "_pthread_key_create": _pthread_key_create, "_pthread_once": _pthread_once, "_pthread_setspecific": _pthread_setspecific, "_strftime": _strftime, "_strftime_l": _strftime_l, "constNoSmartPtrRawPointerToWireType": constNoSmartPtrRawPointerToWireType, "count_emval_handles": count_emval_handles, "craftInvokerFunction": craftInvokerFunction, "createNamedFunction": createNamedFunction, "downcastPointer": downcastPointer, "embind__requireFunction": embind__requireFunction, "embind_init_charCodes": embind_init_charCodes, "emscriptenWebGLComputeImageSize": emscriptenWebGLComputeImageSize, "emscriptenWebGLGetTexPixelData": emscriptenWebGLGetTexPixelData, "ensureOverloadTable": ensureOverloadTable, "exposePublicSymbol": exposePublicSymbol, "extendError": extendError, "floatReadValueFromPointer": floatReadValueFromPointer, "flushPendingDeletes": flushPendingDeletes, "genericPointerToWireType": genericPointerToWireType, "getBasestPointer": getBasestPointer, "getInheritedInstance": getInheritedInstance, "getInheritedInstanceCount": getInheritedInstanceCount, "getLiveInheritedInstances": getLiveInheritedInstances, "getShiftFromSize": getShiftFromSize, "getTypeName": getTypeName, "get_first_emval": get_first_emval, "heap32VectorToArray": heap32VectorToArray, "init_ClassHandle": init_ClassHandle, "init_RegisteredPointer": init_RegisteredPointer, "init_embind": init_embind, "init_emval": init_emval, "integerReadValueFromPointer": integerReadValueFromPointer, "makeClassHandle": makeClassHandle, "makeLegalFunctionName": makeLegalFunctionName, "new_": new_, "nonConstNoSmartPtrRawPointerToWireType": nonConstNoSmartPtrRawPointerToWireType, "readLatin1String": readLatin1String, "registerType": registerType, "replacePublicSymbol": replacePublicSymbol, "runDestructor": runDestructor, "runDestructors": runDestructors, "setDelayFunction": setDelayFunction, "shallowCopyInternalPointer": shallowCopyInternalPointer, "simpleReadValueFromPointer": simpleReadValueFromPointer, "throwBindingError": throwBindingError, "throwInstanceAlreadyDeleted": throwInstanceAlreadyDeleted, "throwInternalError": throwInternalError, "throwUnboundTypeError": throwUnboundTypeError, "upcastPointer": upcastPointer, "whenDependentTypesAreResolved": whenDependentTypesAreResolved, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX };
+Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_diii": nullFunc_diii, "nullFunc_ff": nullFunc_ff, "nullFunc_fii": nullFunc_fii, "nullFunc_fiii": nullFunc_fiii, "nullFunc_i": nullFunc_i, "nullFunc_ii": nullFunc_ii, "nullFunc_iii": nullFunc_iii, "nullFunc_iiiffi": nullFunc_iiiffi, "nullFunc_iiii": nullFunc_iiii, "nullFunc_iiiii": nullFunc_iiiii, "nullFunc_iiiiid": nullFunc_iiiiid, "nullFunc_iiiiii": nullFunc_iiiiii, "nullFunc_iiiiiid": nullFunc_iiiiiid, "nullFunc_iiiiiii": nullFunc_iiiiiii, "nullFunc_iiiiiiii": nullFunc_iiiiiiii, "nullFunc_iiiiiiiii": nullFunc_iiiiiiiii, "nullFunc_iiiiiiiiiii": nullFunc_iiiiiiiiiii, "nullFunc_iiiiiiiiiiii": nullFunc_iiiiiiiiiiii, "nullFunc_iiiiiiiiiiiii": nullFunc_iiiiiiiiiiiii, "nullFunc_iiiiij": nullFunc_iiiiij, "nullFunc_jiiii": nullFunc_jiiii, "nullFunc_v": nullFunc_v, "nullFunc_vf": nullFunc_vf, "nullFunc_vfff": nullFunc_vfff, "nullFunc_vffff": nullFunc_vffff, "nullFunc_vfffii": nullFunc_vfffii, "nullFunc_vfii": nullFunc_vfii, "nullFunc_vi": nullFunc_vi, "nullFunc_vidd": nullFunc_vidd, "nullFunc_vif": nullFunc_vif, "nullFunc_viff": nullFunc_viff, "nullFunc_vifff": nullFunc_vifff, "nullFunc_viffff": nullFunc_viffff, "nullFunc_viffffff": nullFunc_viffffff, "nullFunc_vifffii": nullFunc_vifffii, "nullFunc_viffi": nullFunc_viffi, "nullFunc_vifi": nullFunc_vifi, "nullFunc_vifii": nullFunc_vifii, "nullFunc_vii": nullFunc_vii, "nullFunc_viif": nullFunc_viif, "nullFunc_viifff": nullFunc_viifff, "nullFunc_viiffff": nullFunc_viiffff, "nullFunc_viiffi": nullFunc_viiffi, "nullFunc_viii": nullFunc_viii, "nullFunc_viiii": nullFunc_viiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viiiiii": nullFunc_viiiiii, "nullFunc_viiiiiii": nullFunc_viiiiiii, "nullFunc_viiiiiiiiii": nullFunc_viiiiiiiiii, "nullFunc_viiiiiiiiiiiiiii": nullFunc_viiiiiiiiiiiiiii, "nullFunc_viijii": nullFunc_viijii, "invoke_diii": invoke_diii, "invoke_ff": invoke_ff, "invoke_fii": invoke_fii, "invoke_fiii": invoke_fiii, "invoke_i": invoke_i, "invoke_ii": invoke_ii, "invoke_iii": invoke_iii, "invoke_iiiffi": invoke_iiiffi, "invoke_iiii": invoke_iiii, "invoke_iiiii": invoke_iiiii, "invoke_iiiiid": invoke_iiiiid, "invoke_iiiiii": invoke_iiiiii, "invoke_iiiiiid": invoke_iiiiiid, "invoke_iiiiiii": invoke_iiiiiii, "invoke_iiiiiiii": invoke_iiiiiiii, "invoke_iiiiiiiii": invoke_iiiiiiiii, "invoke_iiiiiiiiiii": invoke_iiiiiiiiiii, "invoke_iiiiiiiiiiii": invoke_iiiiiiiiiiii, "invoke_iiiiiiiiiiiii": invoke_iiiiiiiiiiiii, "invoke_iiiiij": invoke_iiiiij, "invoke_jiiii": invoke_jiiii, "invoke_v": invoke_v, "invoke_vf": invoke_vf, "invoke_vfff": invoke_vfff, "invoke_vffff": invoke_vffff, "invoke_vfffii": invoke_vfffii, "invoke_vfii": invoke_vfii, "invoke_vi": invoke_vi, "invoke_vidd": invoke_vidd, "invoke_vif": invoke_vif, "invoke_viff": invoke_viff, "invoke_vifff": invoke_vifff, "invoke_viffff": invoke_viffff, "invoke_viffffff": invoke_viffffff, "invoke_vifffii": invoke_vifffii, "invoke_viffi": invoke_viffi, "invoke_vifi": invoke_vifi, "invoke_vifii": invoke_vifii, "invoke_vii": invoke_vii, "invoke_viif": invoke_viif, "invoke_viifff": invoke_viifff, "invoke_viiffff": invoke_viiffff, "invoke_viiffi": invoke_viiffi, "invoke_viii": invoke_viii, "invoke_viiii": invoke_viiii, "invoke_viiiii": invoke_viiiii, "invoke_viiiiii": invoke_viiiiii, "invoke_viiiiiii": invoke_viiiiiii, "invoke_viiiiiiiiii": invoke_viiiiiiiiii, "invoke_viiiiiiiiiiiiiii": invoke_viiiiiiiiiiiiiii, "invoke_viijii": invoke_viijii, "ClassHandle": ClassHandle, "ClassHandle_clone": ClassHandle_clone, "ClassHandle_delete": ClassHandle_delete, "ClassHandle_deleteLater": ClassHandle_deleteLater, "ClassHandle_isAliasOf": ClassHandle_isAliasOf, "ClassHandle_isDeleted": ClassHandle_isDeleted, "RegisteredClass": RegisteredClass, "RegisteredPointer": RegisteredPointer, "RegisteredPointer_deleteObject": RegisteredPointer_deleteObject, "RegisteredPointer_destructor": RegisteredPointer_destructor, "RegisteredPointer_fromWireType": RegisteredPointer_fromWireType, "RegisteredPointer_getPointee": RegisteredPointer_getPointee, "__ZSt18uncaught_exceptionv": __ZSt18uncaught_exceptionv, "___assert_fail": ___assert_fail, "___buildEnvironment": ___buildEnvironment, "___cxa_allocate_exception": ___cxa_allocate_exception, "___cxa_begin_catch": ___cxa_begin_catch, "___cxa_end_catch": ___cxa_end_catch, "___cxa_find_matching_catch": ___cxa_find_matching_catch, "___cxa_find_matching_catch_2": ___cxa_find_matching_catch_2, "___cxa_find_matching_catch_3": ___cxa_find_matching_catch_3, "___cxa_free_exception": ___cxa_free_exception, "___cxa_pure_virtual": ___cxa_pure_virtual, "___cxa_rethrow": ___cxa_rethrow, "___cxa_throw": ___cxa_throw, "___gxx_personality_v0": ___gxx_personality_v0, "___lock": ___lock, "___map_file": ___map_file, "___resumeException": ___resumeException, "___setErrNo": ___setErrNo, "___syscall140": ___syscall140, "___syscall145": ___syscall145, "___syscall146": ___syscall146, "___syscall221": ___syscall221, "___syscall5": ___syscall5, "___syscall54": ___syscall54, "___syscall6": ___syscall6, "___syscall91": ___syscall91, "___unlock": ___unlock, "__addDays": __addDays, "__arraySum": __arraySum, "__embind_finalize_value_object": __embind_finalize_value_object, "__embind_register_bool": __embind_register_bool, "__embind_register_class": __embind_register_class, "__embind_register_class_constructor": __embind_register_class_constructor, "__embind_register_class_function": __embind_register_class_function, "__embind_register_class_property": __embind_register_class_property, "__embind_register_emval": __embind_register_emval, "__embind_register_float": __embind_register_float, "__embind_register_function": __embind_register_function, "__embind_register_integer": __embind_register_integer, "__embind_register_memory_view": __embind_register_memory_view, "__embind_register_smart_ptr": __embind_register_smart_ptr, "__embind_register_std_string": __embind_register_std_string, "__embind_register_std_wstring": __embind_register_std_wstring, "__embind_register_value_object": __embind_register_value_object, "__embind_register_value_object_field": __embind_register_value_object_field, "__embind_register_void": __embind_register_void, "__emscripten_fetch_cache_data": __emscripten_fetch_cache_data, "__emscripten_fetch_delete_cached_data": __emscripten_fetch_delete_cached_data, "__emscripten_fetch_load_cached_data": __emscripten_fetch_load_cached_data, "__emscripten_fetch_xhr": __emscripten_fetch_xhr, "__emscripten_get_fetch_work_queue": __emscripten_get_fetch_work_queue, "__emval_call": __emval_call, "__emval_decref": __emval_decref, "__emval_incref": __emval_incref, "__emval_lookupTypes": __emval_lookupTypes, "__emval_register": __emval_register, "__emval_take_value": __emval_take_value, "__exit": __exit, "__isLeapYear": __isLeapYear, "_abort": _abort, "_embind_repr": _embind_repr, "_emscripten_asm_const_ii": _emscripten_asm_const_ii, "_emscripten_get_element_css_size": _emscripten_get_element_css_size, "_emscripten_get_now": _emscripten_get_now, "_emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "_emscripten_is_main_runtime_thread": _emscripten_is_main_runtime_thread, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_emscripten_start_fetch": _emscripten_start_fetch, "_exit": _exit, "_getenv": _getenv, "_glActiveTexture": _glActiveTexture, "_glAttachShader": _glAttachShader, "_glBindAttribLocation": _glBindAttribLocation, "_glBindBuffer": _glBindBuffer, "_glBindTexture": _glBindTexture, "_glBlendFunc": _glBlendFunc, "_glBufferData": _glBufferData, "_glClear": _glClear, "_glClearColor": _glClearColor, "_glCompileShader": _glCompileShader, "_glCompressedTexImage2D": _glCompressedTexImage2D, "_glCreateProgram": _glCreateProgram, "_glCreateShader": _glCreateShader, "_glCullFace": _glCullFace, "_glDeleteBuffers": _glDeleteBuffers, "_glDeleteProgram": _glDeleteProgram, "_glDeleteShader": _glDeleteShader, "_glDeleteTextures": _glDeleteTextures, "_glDepthFunc": _glDepthFunc, "_glDepthMask": _glDepthMask, "_glDisable": _glDisable, "_glDrawElements": _glDrawElements, "_glEnable": _glEnable, "_glEnableVertexAttribArray": _glEnableVertexAttribArray, "_glFrontFace": _glFrontFace, "_glGenBuffers": _glGenBuffers, "_glGenTextures": _glGenTextures, "_glGetProgramInfoLog": _glGetProgramInfoLog, "_glGetProgramiv": _glGetProgramiv, "_glGetShaderInfoLog": _glGetShaderInfoLog, "_glGetShaderiv": _glGetShaderiv, "_glGetUniformLocation": _glGetUniformLocation, "_glIsBuffer": _glIsBuffer, "_glIsProgram": _glIsProgram, "_glIsTexture": _glIsTexture, "_glLinkProgram": _glLinkProgram, "_glPixelStorei": _glPixelStorei, "_glShaderSource": _glShaderSource, "_glTexImage2D": _glTexImage2D, "_glTexParameteri": _glTexParameteri, "_glUniform1f": _glUniform1f, "_glUniform1i": _glUniform1i, "_glUniform3f": _glUniform3f, "_glUniform4f": _glUniform4f, "_glUniformMatrix4fv": _glUniformMatrix4fv, "_glUseProgram": _glUseProgram, "_glVertexAttribPointer": _glVertexAttribPointer, "_glViewport": _glViewport, "_glfwCreateWindow": _glfwCreateWindow, "_glfwDestroyWindow": _glfwDestroyWindow, "_glfwGetCursorPos": _glfwGetCursorPos, "_glfwGetFramebufferSize": _glfwGetFramebufferSize, "_glfwGetTime": _glfwGetTime, "_glfwGetVersion": _glfwGetVersion, "_glfwGetWindowSize": _glfwGetWindowSize, "_glfwInit": _glfwInit, "_glfwMakeContextCurrent": _glfwMakeContextCurrent, "_glfwPollEvents": _glfwPollEvents, "_glfwSetCursorEnterCallback": _glfwSetCursorEnterCallback, "_glfwSetCursorPosCallback": _glfwSetCursorPosCallback, "_glfwSetFramebufferSizeCallback": _glfwSetFramebufferSizeCallback, "_glfwSetKeyCallback": _glfwSetKeyCallback, "_glfwSetMouseButtonCallback": _glfwSetMouseButtonCallback, "_glfwSetWindowSizeCallback": _glfwSetWindowSizeCallback, "_glfwSwapBuffers": _glfwSwapBuffers, "_glfwTerminate": _glfwTerminate, "_glfwWindowHint": _glfwWindowHint, "_llvm_fabs_f32": _llvm_fabs_f32, "_llvm_trap": _llvm_trap, "_pthread_cond_wait": _pthread_cond_wait, "_pthread_getspecific": _pthread_getspecific, "_pthread_key_create": _pthread_key_create, "_pthread_once": _pthread_once, "_pthread_setspecific": _pthread_setspecific, "_strftime": _strftime, "_strftime_l": _strftime_l, "constNoSmartPtrRawPointerToWireType": constNoSmartPtrRawPointerToWireType, "count_emval_handles": count_emval_handles, "craftInvokerFunction": craftInvokerFunction, "createNamedFunction": createNamedFunction, "downcastPointer": downcastPointer, "embind__requireFunction": embind__requireFunction, "embind_init_charCodes": embind_init_charCodes, "emscriptenWebGLComputeImageSize": emscriptenWebGLComputeImageSize, "emscriptenWebGLGetTexPixelData": emscriptenWebGLGetTexPixelData, "ensureOverloadTable": ensureOverloadTable, "exposePublicSymbol": exposePublicSymbol, "extendError": extendError, "floatReadValueFromPointer": floatReadValueFromPointer, "flushPendingDeletes": flushPendingDeletes, "genericPointerToWireType": genericPointerToWireType, "getBasestPointer": getBasestPointer, "getInheritedInstance": getInheritedInstance, "getInheritedInstanceCount": getInheritedInstanceCount, "getLiveInheritedInstances": getLiveInheritedInstances, "getShiftFromSize": getShiftFromSize, "getTypeName": getTypeName, "get_first_emval": get_first_emval, "heap32VectorToArray": heap32VectorToArray, "init_ClassHandle": init_ClassHandle, "init_RegisteredPointer": init_RegisteredPointer, "init_embind": init_embind, "init_emval": init_emval, "integerReadValueFromPointer": integerReadValueFromPointer, "makeClassHandle": makeClassHandle, "makeLegalFunctionName": makeLegalFunctionName, "new_": new_, "nonConstNoSmartPtrRawPointerToWireType": nonConstNoSmartPtrRawPointerToWireType, "readLatin1String": readLatin1String, "registerType": registerType, "replacePublicSymbol": replacePublicSymbol, "requireHandle": requireHandle, "requireRegisteredType": requireRegisteredType, "runDestructor": runDestructor, "runDestructors": runDestructors, "setDelayFunction": setDelayFunction, "shallowCopyInternalPointer": shallowCopyInternalPointer, "simpleReadValueFromPointer": simpleReadValueFromPointer, "throwBindingError": throwBindingError, "throwInstanceAlreadyDeleted": throwInstanceAlreadyDeleted, "throwInternalError": throwInternalError, "throwUnboundTypeError": throwUnboundTypeError, "upcastPointer": upcastPointer, "validateThis": validateThis, "whenDependentTypesAreResolved": whenDependentTypesAreResolved, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX };
 // EMSCRIPTEN_START_ASM
 var asm =Module["asm"]// EMSCRIPTEN_END_ASM
 (Module.asmGlobalArg, Module.asmLibraryArg, buffer);
@@ -12406,6 +12663,10 @@ var dynCall_ff = Module["dynCall_ff"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["dynCall_ff"].apply(null, arguments) };
+var dynCall_fii = Module["dynCall_fii"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["dynCall_fii"].apply(null, arguments) };
 var dynCall_fiii = Module["dynCall_fiii"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -12422,6 +12683,10 @@ var dynCall_iii = Module["dynCall_iii"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["dynCall_iii"].apply(null, arguments) };
+var dynCall_iiiffi = Module["dynCall_iiiffi"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["dynCall_iiiffi"].apply(null, arguments) };
 var dynCall_iiii = Module["dynCall_iiii"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -12558,6 +12823,10 @@ var dynCall_viiffff = Module["dynCall_viiffff"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["dynCall_viiffff"].apply(null, arguments) };
+var dynCall_viiffi = Module["dynCall_viiffi"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["dynCall_viiffi"].apply(null, arguments) };
 var dynCall_viii = Module["dynCall_viii"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');

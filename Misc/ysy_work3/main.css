@@ -110,7 +110,7 @@ pre {
     height: calc(30vw); 
     */
     width: 100%;
-    height: calc(100vw * 0.5 * 0.5); 
+    height: calc(100vw * 0.5 * 0.5 * 0.5); 
     
     
     /*white-space: pre-wrap;       /* Since CSS 2.1 */

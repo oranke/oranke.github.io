@@ -144,4 +144,63 @@ delta 를 켜면 현재값에 대한 변위값으로 이동.
 
 # 엔터티 제어 함수 및 자료형
 
-작업중...
+주의!! emscripten의 한계로 인해 리턴받은 객체는 사용 후 delete로 제거해주어야 한다. 
+
+## getRootNode(rootNodeIndex)
+
+씬은 베이스, 구조물, 효과물이 트리구조로 구성되어있다. 
+각 요소의 최상의 노드 리턴
+루트노드 인덱스는 각각 0:베이스, 1:구조물, 2:효과물 이다. 
+
+
+## getIsectEntity(rootNodeIndex, x, y, depthStep)
+
+x, y 위치에 해당하는 엔터티 리턴. 
+깊이탐색 스텝은 트리구조의 어디까지 탐색할지를 지정. 
+
+```js
+    canvas.onmousedown = function(event) {
+        let a = Module.getIsectEntity(0, event.offsetX, event.offsetY, 10000); 
+        console.log(a.name); 
+
+        a.delete(); // 주의! 사용 후 호출 필요!!
+    }
+   
+```
+
+## getEntityByName()
+
+미구현
+
+
+## EntityHandle
+
+씬을 구성하는 엔터티 제어 객체. 
+
+* 공통값
+    * name
+    엔터티의 이름. 읽기전용
+    
+    * parent
+    엔터티의 부모노드.
+
+    * bound
+    경계정보. 미구현. 
+
+* 노드의 경우
+    * childCount
+    자식의 갯수
+
+    * getChild(index)
+    index 에 해당하는 자식 리턴
+
+* 지오메트리의 경우
+    * diffuse 
+    재질색상. 
+    0xffffffff - 흰색, 0xff000000 - 검은색.
+
+    * blending 미구현
+
+    * DFA, TSA, TMA 미구현
+
+    

@@ -10,25 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <script>
+        var scene_structure = undefined; 
+
         function initApp() {
-            var sceneDiffuse = {
-                r: 1.0,
-                g: 1.0, 
-                b: 1.0
-            };
-
-            var sceneAmbient = {
-                r: 0.4,
-                g: 0.4, 
-                b: 0.4
-            }
-
             // Set resource download base and bkw name.
             Module.setUrlBase('./');
             Module.setBkwName('FactoryLine2');
 
             // Set camear pos to factory center
             Module.setCameraPos(14.0, 0, 10.0, false, false); 
+            Module.setCameraRotSpeed_Fov(10, 100, 1);
             // Set wheel event to zoom
             var canvas = document.getElementById('canvas'); 
             canvas.addEventListener("wheel", function(event) {
@@ -39,7 +30,104 @@
 
                 event.preventDefault(); 
             }, {passive: false})
-            Module.setCameraRotSpeed_Fov(10, 100, 1);
+
+            // Set mouse action
+            Module.useDefaultMouseAction(false); 
+
+            var isDownForCamera = false; 
+            var firstDownPos = undefined; 
+            var lastDownPos = undefined; 
+
+            var select_fixtr = undefined; 
+
+            canvas.onpointerdown = function(event) {
+                event.preventDefault(); 
+                event.target.setPointerCapture(event.pointerId);
+                // console.log("MouseDown", event.offsetX, event.offsetY); 
+
+                if (select_fixtr) {
+                    select_fixtr.diffuse = select_fixtr.saved_diffuse; 
+                    select_fixtr.delete(); 
+                }
+
+                select_fixtr = 
+                    Module.getIsectEntity(
+                        1, // search fixture root node
+                        event.offsetX, 
+                        event.offsetY, 
+                        100000
+                    );
+                
+                if (select_fixtr) {
+                    select_fixtr.saved_diffuse = select_fixtr.diffuse;
+                    select_fixtr.diffuse = 0xFFFF0000;
+
+                    return; 
+                }
+
+                isDownForCamera = true; 
+                firstDownPos = {
+                    x: event.offsetX,
+                    y: event.offsetY
+                }
+
+                lastDownPos = {
+                    x: event.offsetX,
+                    y: event.offsetY
+                }
+            }
+
+            canvas.onpointerup = function(event) {
+                event.target.releasePointerCapture(event.pointerId);
+
+                if (isDownForCamera) {
+                    isDownForCamera = false; 
+
+                    var dx = event.offsetX - firstDownPos.x; 
+                    var dy = event.offsetY - firstDownPos.y; 
+
+                    if (dx * dx + dy * dy < 25) {
+                        var select_base = 
+                            Module.getIsectEntity(
+                            0, // search base root node
+                            event.offsetX, 
+                            event.offsetY, 
+                            100000
+                        );
+
+                        if (select_base) {
+                            //console.log(select_base.hitPos); 
+                            Module.setCameraPos(
+                                select_base.hitPos.x,
+                                select_base.hitPos.y,
+                                select_base.hitPos.z, 
+                                true, false
+                            )
+
+                            select_base.delete(); 
+                        }
+                    }
+
+                }
+                // console.log("MouseUp", event.offsetX, event.offsetY); 
+            }
+
+            canvas.onpointermove = function(event) {
+                if (isDownForCamera) {
+                    var dx = event.offsetX - lastDownPos.x; 
+                    var dy = event.offsetY - lastDownPos.y; 
+                    //console.log(dx, dy); 
+
+                    Module.setCameraRot_X( dy / 5.0 , true, true);
+                    Module.setCameraRot_Y( dx / 5.0 , true, true);
+
+                    lastDownPos = {
+                        x: event.offsetX,
+                        y: event.offsetY
+                    }
+                }
+            }
+
 
             // Set browser resize event
             window.addEventListener('resize', function() {
@@ -62,6 +150,18 @@
             $('#btn_bgcolor_3').click(function(){
                 Module.setSceneFogColor(0, 0, 0, 0);
             });
+
+            var sceneDiffuse = {
+                r: 1.0,
+                g: 1.0, 
+                b: 1.0
+            };
+
+            var sceneAmbient = {
+                r: 0.4,
+                g: 0.4, 
+                b: 0.4
+            }
 
             $('#btn_lignt_inc').click(function(){
                 sceneDiffuse.r += 0.1;
@@ -110,6 +210,48 @@
                     sceneAmbient.b
                 );
             });
+
+
+            $('#btn_build_objects').click(function(){
+                if (scene_structure) return; 
+
+                var scene_str = ''; 
+
+                // Set root nodes.
+                scene_structure = {
+                    base : Module.getRootNode(0),
+                    fixt : Module.getRootNode(1),
+                    efft : Module.getRootNode(2),
+                }
+
+                function buildStructure( node, prefix = '  ' ) {
+                    for (var i=0; i<node.childCount; i++) {
+
+                        var child = node.getChild(i); 
+                        node[child.name] = child; 
+                        scene_str += '\n' + prefix + child.name;
+
+                        buildStructure( child, prefix + '  ' ); 
+                    }
+                }
+
+                scene_str = '*base';
+                buildStructure(scene_structure.base); 
+                scene_str += '\n*fixt';
+                buildStructure(scene_structure.fixt); 
+                scene_str += '\n*efft';
+                buildStructure(scene_structure.efft); 
+
+
+                $("#scene_view").text(scene_str);
+            });
+
+            $('#btn_code_test').click(function(){
+                eval(
+                    $('#txt_code_test').val()
+                )
+            });
+
         }
     </script>
 
@@ -124,7 +266,7 @@
         <div class="emscripten" style="width: 100%; height: 40vw;">
             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
         </div>
-        <textarea id="output" rows="8" readonly></textarea>
+        <textarea id="output" rows="5" readonly style=display:none></textarea>
 
         <hr>
         <h3>Bg Color</h3>
@@ -136,6 +278,11 @@
 
         <hr>
         <h3>Scene structure</h3>
+        <button id="btn_build_objects">Build</button>
+        <pre id="scene_view">Scene structure</pre>
+
+        <input type="text" id="txt_code_test" style="width:100%" value="scene_structure.base.Floor.diffuse = 0xffff0000">
+        <button id="btn_code_test">code test</button>
 
         <br>
         <div class="emscripten" id="status">Downloading...</div>
