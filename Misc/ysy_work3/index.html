@@ -15,7 +15,7 @@
         function initApp() {
             // Set resource download base and bkw name.
             Module.setUrlBase('./');
-            Module.setBkwName('FactoryLine2');
+            Module.setBkwName('FactoryLine3');
 
             // Set camear pos to factory center
             Module.setCameraPos(14.0, 0, 10.0, false, false); 
@@ -252,6 +252,15 @@
                 )
             });
 
+            $('#btn_find_by_name').click(function() {
+                var line1_humnan_1 =
+                    Module.getRootNode(1).getChildByName('HUMAN_1_1', 100)
+
+                var pos = line1_humnan_1.localPos; 
+                pos.z += 0.5;
+                line1_humnan_1.localPos = pos; 
+            });
+
         }
     </script>
 
@@ -283,6 +292,9 @@
 
         <input type="text" id="txt_code_test" style="width:100%" value="scene_structure.base.Floor.diffuse = 0xffff0000">
         <button id="btn_code_test">code test</button>
+        <br>
+        <button id="btn_find_by_name">Find by name</button>
+
 
         <br>
         <div class="emscripten" id="status">Downloading...</div>

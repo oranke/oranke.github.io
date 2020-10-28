@@ -178,14 +178,30 @@ x, y 위치에 해당하는 엔터티 리턴.
 씬을 구성하는 엔터티 제어 객체. 
 
 * 공통값
-    * name
-    엔터티의 이름. 읽기전용
+    * name. RW. 
+    엔터티의 이름.
     
-    * parent
+    * parent. RW.
     엔터티의 부모노드.
 
-    * bound
+    * bound. R.
     경계정보. 미구현. 
+
+    * is_node. R.
+    엔터티가 노드인지 여부.
+
+    * hitPos. R. 
+    getIsectEntity() 로 리턴받을 때 마우스 클릭된 전역 공간 위치. 
+
+    * localPos. RW. 
+    로컬 위치. xyz. 
+
+    * localScale. RW.
+    로컬 스케일. xyz. 
+
+    * localRot. RW. 
+    로컬 회전. ptich, yaw, roll. 
+
 
 * 노드의 경우
     * childCount
@@ -194,13 +210,23 @@ x, y 위치에 해당하는 엔터티 리턴.
     * getChild(index)
     index 에 해당하는 자식 리턴
 
+    * getChildByName(name, depth)
+    이름에 해당하는 자식 리턴. depth는 트리 탐색 깊이.
+
+
 * 지오메트리의 경우
-    * diffuse 
+    * diffuse. RW. 
     재질색상. 
     0xffffffff - 흰색, 0xff000000 - 검은색.
+    알파채널은 효과물일 때만 동작. 
 
-    * blending 미구현
+    * goemetry_id. RW. 
+    지오메트리 아이디. 주의! 경계값은 바뀌지 않는다. 
 
-    * DFA, TSA, TMA 미구현
+    * blending. 미구현.
+    효과물 노드일 때 동작.
 
-    
+    * DFA, TSA, TMA. 미구현.
+    효과물 노드일 때 동작.
+
+
