@@ -29,7 +29,9 @@ canvas {
 
 .emscripten { 
     position: relative;
+    /*
     padding-right: 0; 
+    */
     margin-left: auto; 
     margin-right: auto; 
     display: block; 
@@ -39,10 +41,11 @@ canvas {
 canvas.emscripten { 
     border: 1px black solid; 
     /*
+    margin: 5px;
     background-color: black; 
     border: 0px none; 
     */
-    width: 100%; height: 100%;
+    width: 99%; height: 99%;
 }
 
 #lbl-info {
@@ -55,7 +58,7 @@ canvas.emscripten {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */    
     border-radius: 0.5em;
-    
+
     padding-top: 0.5em;                                  
     padding-bottom: 0.5em;
     padding-left: 1em;
