@@ -202,6 +202,12 @@ x, y 위치에 해당하는 엔터티 리턴.
     * localRot. RW. 
     로컬 회전. ptich, yaw, roll. 
 
+    * makeClone(). 
+    현재 엔터티를 동일하게 복제. 
+
+    * removeFromScene(). 
+    엔터티를 씬에서 제거. 
+
 
 * 노드의 경우
     * childCount
