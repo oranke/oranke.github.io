@@ -42,6 +42,7 @@
             canvas.addEventListener("wheel", function(event) {
                 //console.log('haha', event)
                 //setSceneScale( event.deltaY ); 
+                $('#lbl-info').hide();
 
                 Module.setCameraRot_Fov( -event.deltaY / 50, true, true );
 
