@@ -285,6 +285,60 @@
                 line1_humnan_1.localPos = pos; 
             });
 
+
+            // blink line1 on / off
+            {
+                var blink_timer = undefined; 
+                var blink_step = 0; // 0: white, 1: red
+
+                function proc_line1_diffuse() {
+                    console.log('Proc diffuse', blink_step)
+                    var diffuse = blink_step?0xffff0000:0xffffffff;
+
+                    function proc_tree(entityNode) {
+                        for (var i=0; i< entityNode.childCount; i++) {
+                            var child = entityNode.getChild(i); 
+
+                            if (child.is_node) 
+                                proc_tree(child);
+                            else {
+                                if (child.name.slice(0, 6) != 'HUNMAN') // ignore 'HUNMAN..'
+                                if (!select_fixtr || !child.isSameEntity(select_fixtr)) // ignore select
+                                    child.diffuse = diffuse; 
+                            }
+                                
+                            child.delete();
+                        }
+                    }
+
+                    var fixt_root = Module.getRootNode(1); 
+                    var line_1 = fixt_root.getChildByName('LINE1', 0);
+                    proc_tree(line_1); 
+                    line_1.delete();
+                    fixt_root.delete(); 
+
+                    blink_step = (blink_step +1) % 2;
+                }
+
+                $('#btn_blink_line1').click(function() {
+
+                    if (blink_timer) {
+                        // 
+                        
+                        clearInterval(blink_timer); 
+                        blink_timer = undefined; 
+                        blink_step = 0; 
+                        proc_line1_diffuse();
+                    } else {
+                        blink_step = 1; 
+                        proc_line1_diffuse();
+                        blink_timer = setInterval(proc_line1_diffuse, 500);
+                    }
+                    
+                })
+
+            }
+
         }
     </script>
 
@@ -319,6 +373,7 @@
         <button id="btn_code_test">code test</button>
         <br>
         <button id="btn_find_by_name">Find by name</button>
+        <button id="btn_blink_line1">Blink LINE1</button>
 
 
         <br>

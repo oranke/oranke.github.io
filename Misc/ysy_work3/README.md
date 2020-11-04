@@ -208,6 +208,9 @@ x, y 위치에 해당하는 엔터티 리턴.
     * removeFromScene(). 
     엔터티를 씬에서 제거. 
 
+    * isSameEntity(Entity)
+    핸들러가 다루는 엔터티가 같은 엔터티인지 여부 판단.
+
 
 * 노드의 경우
     * childCount
