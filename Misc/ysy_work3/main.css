@@ -1,3 +1,16 @@
+@import url("https://webglfundamentals.org/webgl/resources/webgl-tutorials.css");
+#ui {
+    /*
+    position: absolute;
+    padding: 0em;
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    */
+    width: 200px;
+}
+
+
 body {
     background-color:#F0F0F0;
     padding: 2em;
@@ -9,23 +22,11 @@ body {
     margin: 0 auto;
 }
 
-label {
-    display:block;
-    margin-bottom:10px;
-}
-
-input {
+#txt_code_test {
     padding:10px;
     width: 80%;
     margin-bottom: 1em;
 }
-
-/*
-canvas { 
-    border: 1px solid black; 
-    background-color: #FFFFFF;
-}
-*/
 
 .emscripten { 
     position: relative;
@@ -48,6 +49,7 @@ canvas.emscripten {
     width: 99%; height: 99%;
 }
 
+  
 #lbl-info {
     position: absolute;
     -webkit-touch-callout: none; /* iOS Safari */

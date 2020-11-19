@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/webgl-lessons-ui.js"></script>
     
 
     <script>
@@ -337,6 +338,45 @@
                     
                 })
 
+                let light_x = 60;
+                let light_y = -30;
+                // Setup sliders
+                webglLessonsUI.setupSlider("#lx", {slide: updatePosition(0), min: 20, max: 80, value: light_x });
+                webglLessonsUI.setupSlider("#ly", {slide: updatePosition(1), min: -180, max: 180, value: light_y });
+
+                function D2R( deg ) {
+                    return deg * Math.PI / 180;
+                }
+
+                function updatePosition(index) {
+                    return function(event, ui) {
+
+                        switch (index) {
+                            case 0:
+                                light_x = ui.value; 
+                                break;
+                            case 1:
+                                light_y = ui.value;
+                                break;
+
+                            default:
+                                break;
+                        }
+
+                        let sin_x = Math.sin(D2R(light_x));
+                        let sin_y = Math.sin(D2R(light_y));
+                        let cos_x = Math.cos(D2R(light_x));
+                        let cos_y = Math.cos(D2R(light_y));
+
+                        //console.log(sin_y, -sin_x * cos_y, cos_y * cos_x);
+                        //Module.setLightDir(-sin_y, -sin_x * cos_y, cos_y * cos_x);
+                        //console.log(-sin_y * cos_x, sin_x, cos_y * cos_x);
+                        Module.setLightDir(-sin_y * cos_x, sin_x, cos_y * cos_x);
+                        //console.log(index, ui.value);
+                    };
+                }
+
+
             }
 
         }
@@ -352,6 +392,13 @@
         <hr>
         <div class="emscripten" style="width: 100%; height: 40vw;">
             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+            <div id="uiContainer">
+                <div id="ui">
+                    <div id="lx"></div>
+                    <div id="ly"></div>
+                </div>
+            </div>
+                   
             <div id="lbl-info" hidden>Infos</div>
         </div>
         <textarea id="output" rows="5" readonly style=display:none></textarea>
