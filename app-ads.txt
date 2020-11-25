@@ -14,11 +14,14 @@ rubiconproject.com, 21526, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 20050, RESELLER, 0bfd66d529a55807
 reforge.in, 107, RESELLER
 velismedia.com, 725, RESELLER
+velismedia.com, 1137, RESELLER
 appnexus.com, 7353, RESELLER
 xandr.com, 7353, RESELLER
 algorix.co, 54616, RESELLER
 admixer.net, 4ca083cd-412f-49fe-b832-5b66ee490d9a, RESELLER
-smartadserver.com, 3020, DIRECT
-smartadserver.com, 3020, RESELLER
+pubnative.net, 1006955, RESELLER, d641df8625486a7b
+pubnative.net, 1007040, RESELLER, d641df8625486a7b
+kidoz.net, 19692013, RESELLER
+lemmatechnologies.com, 362, RESELLER
 telaria.com, rwd19-1200549, RESELLER, 1a4e959a1b50034a
 tremorhub.com, rwd19-1200549, RESELLER, 1a4e959a1b50034a
