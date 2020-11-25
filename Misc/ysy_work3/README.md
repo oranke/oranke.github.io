@@ -37,6 +37,25 @@
     Module.setBkwName('FactoryLine2');
 ```
 
+## setBkwObjectChangedFunc(func_name) 
+
+bkw 가 변경될 때 실행할 콜백함수의 `함수명` 설정. 
+
+```js
+function bkwChanged(bkwName) {
+    alert(bkwName);
+}
+
+Module.setBkwObjectChangedFunc("bkwChanged")
+```
+
+## recalcBkwBound(recalcAll)
+
+bkw 의 경계정보 재계산. 
+recaleAll 이 false 이면 현재 엔터티 루트들의 경계정보를 사용. 
+true 라면 모든 엔터티의 경계정보를 재계산.
+
+
 # 씬 제어 함수
 
 ## useDefaultMouseAction(setting)
@@ -233,6 +252,12 @@ x, y 위치에 해당하는 엔터티 리턴.
     * getChildByName(name, depth)
     이름에 해당하는 자식 리턴. depth는 트리 탐색 깊이.
 
+    * makeNode().
+    자식 노드 생성. 초기 이름은 'nonamed' 이며 경계정보 없음. 
+
+    * recalcBound()
+    경계정보 재계산. 
+    
 
 * 지오메트리의 경우
     * diffuse. RW. 

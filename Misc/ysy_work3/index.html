@@ -15,6 +15,80 @@
     <script>
         var scene_structure = undefined; 
         var select_fixtr = undefined; 
+        var camera_offset_y = 0.0;
+
+        function bkwChanged(bkwName) {
+            //alert(bkwName);
+
+            switch (bkwName) {
+                // Dynamic setting example 
+                case "LotteCamical":
+                {
+                    // set camera pos
+                    camera_offset_y = 4.5;
+                    Module.setCameraPos(10.0, camera_offset_y, 7.0, false, false); 
+
+                    // set base floor size
+                    {
+                        var baseRoot = Module.getRootNode(0); 
+                        var floor = baseRoot.getChildByName('tpl_Floor', 10);
+                        if (floor) {
+                            floor.localScale = {
+                                x: 20,
+                                y: 1,
+                                z: 15
+                            }
+
+                            floor.delete(); // !Must call to free js heap!
+                        }
+                        baseRoot.delete(); // !Must call to free js heap!
+                    }
+                    
+                    // clone an set attibute machine sets
+                    {
+                        var fixtRoot = Module.getRootNode(1);
+                        var mcSet = fixtRoot.getChildByName('mcset', 10);
+                        if (mcSet) {
+                            var mcPos = {
+                                x: 2, 
+                                y: 0,
+                                z: 7
+                            }
+
+                            // clone entity
+                            for (var i=1; i<=4; i++) {
+                                var cloneMc = mcSet.makeClone();
+                                // set node name and pos
+                                cloneMc.name = cloneMc.name + i;
+                                cloneMc.localPos = mcPos; 
+                                mcPos.x += 5;
+
+                                // set child entities name
+                                for (var j=0; j<cloneMc.childCount; j++) {
+                                    var child = cloneMc.getChild(j);
+                                    if (child) {
+                                        child.name = child.name + i;
+                                        child.delete();
+                                    }
+                                }
+
+                                cloneMc.delete();
+                            }
+
+                            mcSet.visible = false; 
+                            mcSet.delete();
+                        }
+
+                        fixtRoot.delete();
+                    }
+
+
+                    // recalc all entity bounds
+                    Module.recalcBkwBound(true);
+                }
+                break;
+            }
+        }
 
         function getParam(sname) {
             var params = location.search.substr(location.search.indexOf("?") + 1);
@@ -29,14 +103,15 @@
 
         function initApp() {
             var bkwName = getParam('bkw');
-            if (bkwName.length == 0) bkwName = 'FactoryLine4';
+            if (bkwName.length == 0) bkwName = 'LotteCamical';
 
             // Set resource download base and bkw name.
             Module.setUrlBase('./');
             Module.setBkwName(bkwName);
+            Module.setBkwObjectChangedFunc("bkwChanged")
 
             // Set camear pos to factory center
-            Module.setCameraPos(14.0, 0, 10.0, false, false); 
+            Module.setCameraPos(14.0, camera_offset_y, 10.0, false, false); 
             Module.setCameraRotSpeed_Fov(10, 100, 1);
             // Set wheel event to zoom
             var canvas = document.getElementById('canvas'); 
@@ -124,7 +199,7 @@
                             //console.log(select_base.hitPos); 
                             Module.setCameraPos(
                                 select_base.hitPos.x,
-                                select_base.hitPos.y,
+                                select_base.hitPos.y + camera_offset_y,
                                 select_base.hitPos.z, 
                                 true, false
                             )
@@ -416,12 +491,13 @@
         <button id="btn_build_objects">Build</button>
         <pre id="scene_view">Scene structure</pre>
 
+        <!--
         <input type="text" id="txt_code_test" style="width:100%" value="scene_structure.base.Floor.diffuse = 0xffff0000">
         <button id="btn_code_test">code test</button>
         <br>
         <button id="btn_find_by_name">Find by name</button>
         <button id="btn_blink_line1">Blink LINE1</button>
-
+        -->
 
         <br>
         <div class="emscripten" id="status">Downloading...</div>
