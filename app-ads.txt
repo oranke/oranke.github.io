@@ -23,5 +23,6 @@ pubnative.net, 1006955, RESELLER, d641df8625486a7b
 pubnative.net, 1007040, RESELLER, d641df8625486a7b
 kidoz.net, 19692013, RESELLER
 lemmatechnologies.com, 362, RESELLER
+google.com, pub-5790065399589113, RESELLER
 telaria.com, rwd19-1200549, RESELLER, 1a4e959a1b50034a
 tremorhub.com, rwd19-1200549, RESELLER, 1a4e959a1b50034a
