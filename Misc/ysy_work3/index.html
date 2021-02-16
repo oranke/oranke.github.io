@@ -246,7 +246,18 @@
                 if (canvas.height != h) canvas.height = h;
                 Module.setRenderSize(w, h);
             });
+
+            $('#btn_sample_1').click(function(){
+                Module.setUrlBase('https://xen-memories.github.io/');
+                Module.setBkwName('Jotunheim_0054');
+            });
+
+            $('#btn_sample_2').click(function(){
+                Module.setUrlBase('./');
+                Module.setBkwName('LotteCamical');
+            });
             
+
             $('#btn_bgcolor_1').click(function(){
                 Module.setSceneFogColor(0, 0, 0, 1);
             });
@@ -479,6 +490,8 @@
     <div class="container">
         <h2>Bkw Viewer test</h2>
         <button onclick="location.reload(true); ">Reload</button>
+        <button id="btn_sample_1">sample 1</button>
+        <button id="btn_sample_2">sample 2</button>
         <hr>
         <div class="emscripten" style="width: 100%; height: 40vw;">
             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
@@ -505,6 +518,7 @@
         <h3>Scene structure</h3>
         <button id="btn_print_objects">Print</button>
         <pre id="scene_view">Scene structure</pre>
+
 
         <!--
         <input type="text" id="txt_code_test" style="width:100%" value="scene_structure.base.Floor.diffuse = 0xffff0000">
