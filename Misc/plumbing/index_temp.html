@@ -54,12 +54,22 @@
                 //console.log('tap', ev);   
             })
 
+            var lastDownPos = undefined;
             hammer.on('panstart', function(ev) {
-                //console.log('panstart', ev);   
+                console.log('panstart', ev);   
+                lastDownPos = ev.center; 
             })
 
             hammer.on('pan', function(ev) {
                 //console.log('pan', ev);   
+                var dx = ev.center.x - lastDownPos.x; 
+                var dy = ev.center.y - lastDownPos.y; 
+                //console.log(dx, dy); 
+
+                Module.setCameraRot_X( dy, true, true);
+                Module.setCameraRot_Y( dx, true, true);
+
+                lastDownPos = ev.center;
             })
 
             hammer.on('press', function(ev) {
