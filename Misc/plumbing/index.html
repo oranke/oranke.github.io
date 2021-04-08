@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plumbing test</title>
 
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css?v=24">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     
@@ -47,7 +47,7 @@
             var hammer = new Hammer(canvas);
 
             hammer.get('pinch').set({ enable: true });
-            //hammer.get('rotate').set({ enable: true });
+            hammer.get('rotate').set({ enable: true });
             hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
             hammer.on('tap', function(ev) {
@@ -85,23 +85,6 @@
                 }
             })
 
-            var lastDownPos = undefined;
-            hammer.on('panstart', function(ev) {
-                //console.log('panstart', ev);   
-                lastDownPos = ev.center; 
-            })
-
-            hammer.on('pan', function(ev) {
-                //console.log('pan', ev);   
-                var dx = ev.center.x - lastDownPos.x; 
-                var dy = ev.center.y - lastDownPos.y; 
-                //console.log(dx, dy); 
-
-                Module.setCameraRot_X( dy, true, true);
-                Module.setCameraRot_Y( dx, true, true);
-
-                lastDownPos = ev.center;
-            })
 
             
             var lastScale = 1;
@@ -112,25 +95,55 @@
 
             hammer.on('pinch', function(ev) {
                 //console.log('pinch', ev);   
-                console.log('pinch', lastScale, ev.scale);
-                Module.setCameraRot_Fov( (lastScale - ev.scale) * 10, true, true );
-                lastScale = ev.scale; 
+                //console.log('pinch', lastScale, ev.scale);
+                if (ev && ev.scale) {
+                    Module.setCameraRot_Fov( (lastScale - ev.scale) * 10, true, true );
+                    lastScale = ev.scale; 
+                }
             })
             
-            /*
+            //*
             var lastAngle = 0;
             hammer.on('rotatestart', function(ev) {
                 //console.log('start', ev);
                 lastAngle = ev.rotation; 
+
+                lastScale = 1;
             })
 
             hammer.on('rotate', function(ev) {
                 //console.log('rotate', initAngle, ev.rotation);   
                 //Module.setCameraRot_Y( -ev.rotation, true, false);
-                Module.setCameraRot_Y( lastAngle - ev.rotation, true, true);
-                lastAngle = ev.rotation;
+                if (ev && ev.rotation) {
+                    Module.setCameraRot_Y( lastAngle - ev.rotation, true, true);
+                    lastAngle = ev.rotation;
+                }
             })
-            */
+            //*/
+
+            var lastDownPos = undefined;
+            hammer.on('panstart', function(ev) {
+                //console.log('panstart', ev);   
+                lastDownPos = ev.center; 
+
+                lastAngle = 0;
+                lastScale = 1;
+            })
+
+            hammer.on('pan', function(ev) {
+                if (ev && ev.center) {
+                    //console.log('pan', ev);   
+                    var dx = ev.center.x - lastDownPos.x; 
+                    var dy = ev.center.y - lastDownPos.y; 
+                    //console.log(dx, dy); 
+
+                    Module.setCameraRot_X( dy, true, true);
+                    Module.setCameraRot_Y( dx, true, true);
+
+                    lastDownPos = ev.center;
+                }
+
+            })
 
 
             //*
@@ -237,12 +250,17 @@
 <body>
     <div class="container">
         <h2>Plumbing game test</h2>
+        <pre>
+    pan   - rotate view
+    pinch - zoom in / out
+    tap   - block rotate
+    press - block to center </pre>
         <button onclick="location.reload(true); ">Reload</button>
         <button id="btn_sample_1">Easy</button>
         <button id="btn_sample_2">Medium</button>
         <button id="btn_sample_3">Hard</button>
         <hr>
-        <div class="emscripten" style="width: 100%; height: 50vw;">
+        <div class="emscripten" style="width: 100%; height: 60vw;">
             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
                    
         </div>
