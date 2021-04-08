@@ -47,7 +47,7 @@
             var hammer = new Hammer(canvas);
 
             hammer.get('pinch').set({ enable: true });
-            hammer.get('rotate').set({ enable: true });
+            //hammer.get('rotate').set({ enable: true });
             hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
             hammer.on('tap', function(ev) {
@@ -117,6 +117,7 @@
                 lastScale = ev.scale; 
             })
             
+            /*
             var lastAngle = 0;
             hammer.on('rotatestart', function(ev) {
                 //console.log('start', ev);
@@ -129,6 +130,7 @@
                 Module.setCameraRot_Y( lastAngle - ev.rotation, true, true);
                 lastAngle = ev.rotation;
             })
+            */
 
 
             //*
