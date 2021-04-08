@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plumbing test</title>
 
@@ -10,7 +10,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     
-    <script src="./hammer.min.js"></script>
 
     <script>
         var camera_offset_y = 0.0;
@@ -31,80 +30,12 @@
             //var bkwName = getParam('bkw');
             //if (bkwName.length == 0) bkwName = 'LotteCamical';
 
-            function D2R( deg ) {
-                return deg * Math.PI / 180;
-            }
-
-            Module.useDefaultMouseAction(false); 
-            Module.setCameraRotSpeed_Fov(10, 100, 1);
 
             // Set camear pos to factory center
             //Module.setCameraPos(14.0, camera_offset_y, 10.0, false, false); 
             //Module.setCameraRotSpeed_Fov(10, 100, 1);
-            var canvas = document.getElementById('canvas'); 
-
-            
-            var hammer = new Hammer(canvas);
-
-            hammer.get('pinch').set({ enable: true });
-            hammer.get('rotate').set({ enable: true });
-            hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-            hammer.on('tap', function(ev) {
-                //console.log('tap', ev);   
-            })
-
-            var lastDownPos = undefined;
-            hammer.on('panstart', function(ev) {
-                console.log('panstart', ev);   
-                lastDownPos = ev.center; 
-            })
-
-            hammer.on('pan', function(ev) {
-                //console.log('pan', ev);   
-                var dx = ev.center.x - lastDownPos.x; 
-                var dy = ev.center.y - lastDownPos.y; 
-                //console.log(dx, dy); 
-
-                Module.setCameraRot_X( dy, true, true);
-                Module.setCameraRot_Y( dx, true, true);
-
-                lastDownPos = ev.center;
-            })
-
-            hammer.on('press', function(ev) {
-                //console.log('press', ev);   
-            })
-            
-            var lastScale = 1;
-            hammer.on('pinchstart', function(ev){
-                //console.log('pinchstart', ev);   
-                lastScale = ev.scale; 
-            })
-
-            hammer.on('pinch', function(ev) {
-                //console.log('pinch', ev);   
-                //console.log('pinch', lastScale, ev.scale);
-                Module.setCameraRot_Fov( (lastScale - ev.scale) * 10, true, true );
-                lastScale = ev.scale; 
-            })
-            
-            var lastAngle = 0;
-            hammer.on('rotatestart', function(ev) {
-                //console.log('start', ev);
-                lastAngle = ev.rotation; 
-            })
-
-            hammer.on('rotate', function(ev) {
-                //console.log('rotate', initAngle, ev.rotation);   
-                //Module.setCameraRot_Y( -ev.rotation, true, false);
-                Module.setCameraRot_Y( lastAngle - ev.rotation, true, true);
-                lastAngle = ev.rotation;
-            })
-
-
-            /*
             // Set wheel event to zoom
+            var canvas = document.getElementById('canvas'); 
             canvas.addEventListener("wheel", function(event) {
                 //console.log('haha', event)
                 //setSceneScale( event.deltaY ); 
@@ -113,7 +44,6 @@
 
                 event.preventDefault(); 
             }, {passive: false})
-            */
 
             /*
             // Set mouse action
@@ -321,7 +251,7 @@
         };
         
     </script>
-    <script async type="text/javascript" src="plumbing.js?v=22"></script>
+    <script async type="text/javascript" src="plumbing.js"></script>
 
 </body>
 </html>
