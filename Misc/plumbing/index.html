@@ -79,7 +79,12 @@
                         )
                     if (hitInfo) {
                         //console.log(hitInfo.grid)
-                        Module.setCameraPos(hitInfo.grid.x, 0.25, hitInfo.grid.y, true, false); 
+                        Module.setCameraPos(
+                            hitInfo.grid.x + 0.5, 
+                            0.25, 
+                            hitInfo.grid.y + 0.5, 
+                            true, false
+                        ); 
                         hitInfo.delete();
                     }
                 }
