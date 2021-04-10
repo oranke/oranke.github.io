@@ -95,7 +95,9 @@
             var lastScale = 1;
             hammer.on('pinchstart', function(ev){
                 //console.log('pinchstart', ev);   
-                lastScale = ev.scale; 
+                if (ev && ev.scale) {
+                    lastScale = ev.scale; 
+                }
             })
 
             hammer.on('pinch', function(ev) {
@@ -111,9 +113,9 @@
             var lastAngle = 0;
             hammer.on('rotatestart', function(ev) {
                 //console.log('start', ev);
-                lastAngle = ev.rotation; 
-
-                lastScale = 1;
+                if (ev && ev.scale) {
+                    lastAngle = ev.rotation; 
+                }
             })
 
             hammer.on('rotate', function(ev) {
@@ -129,10 +131,9 @@
             var lastDownPos = undefined;
             hammer.on('panstart', function(ev) {
                 //console.log('panstart', ev);   
-                lastDownPos = ev.center; 
-
-                lastAngle = 0;
-                lastScale = 1;
+                if (ev && ev.center) {
+                    lastDownPos = ev.center; 
+                }
             })
 
             hammer.on('pan', function(ev) {
