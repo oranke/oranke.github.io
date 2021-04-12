@@ -70,7 +70,7 @@
             hammer.on('press', function(ev) {
                 //console.log('press', ev);   
                 // 선택된 블럭을 화면 가운데로.
-                if (Array.isArray(ev.changedPointers) && ev.changedPointers.length > 0)
+                if (ev && Array.isArray(ev.changedPointers) && ev.changedPointers.length > 0)
                 {
                     var hitInfo = 
                         Module.getHitInfo(
@@ -375,7 +375,7 @@
         };
         
     </script>
-    <script async type="text/javascript" src="plumbing.js?v=24"></script>
+    <script async type="text/javascript" src="plumbing.js?v=25"></script>
 
 </body>
 </html>
