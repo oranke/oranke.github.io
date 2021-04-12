@@ -137,7 +137,7 @@
             })
 
             hammer.on('pan', function(ev) {
-                if (ev && ev.center) {
+                if (ev && ev.center && lastDownPos) {
                     //console.log('pan', ev);   
                     var dx = ev.center.x - lastDownPos.x; 
                     var dy = ev.center.y - lastDownPos.y; 
@@ -375,7 +375,7 @@
         };
         
     </script>
-    <script async type="text/javascript" src="plumbing.js?v=23"></script>
+    <script async type="text/javascript" src="plumbing.js?v=24"></script>
 
 </body>
 </html>
