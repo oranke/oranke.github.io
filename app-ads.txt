@@ -5,6 +5,9 @@ admanmedia.com, 613, RESELLER
 admixer.net, 4ca083cd-412f-49fe-b832-5b66ee490d9a, RESELLER
 admixplay.com, 2012, RESELLER
 adview.com, 48045325, RESELLER, 1b2cc038a11ea319
+advlion.com, 3054, RESELLER
+advlion.com, 3083, RESELLER
+advlion.com, 3108, RESELLER
 advlion.com, 5140, RESELLER
 algorix.co, 54616, RESELLER, 5b394c12fea27a1d
 algorix.co, 60016, RESELLER, 5b394c12fea27a1d
@@ -26,6 +29,7 @@ bidmachine.io, 67, RESELLER
 contextweb.com, 562499, RESELLER, 89ff185a4c4e857c
 criteo.com, B-057601, RESELLER, 9fac4a4a87c2a44f
 criteo.com, B-057955, RESELLER, 9fac4a4a87c2a44f
+criteo.com, B-063105, RESELLER, 9fac4a4a87c2a44f
 exchange.admazing.co, AM3, RESELLER
 google.com, pub-5790065399589113, RESELLER
 indexexchange.com, 186081, RESELLER, 50b1c356f2c5c8fc
@@ -33,7 +37,9 @@ indexexchange.com, 186684, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 194080, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 194730, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 198417, RESELLER, 50b1c356f2c5c8fc
+indexexchange.com, 199195, RESELLER, 50b1c356f2c5c8fc
 inmobi.com, 062029933580429f9920bad476d8d70a, RESELLER, 83e75a7ae333ca9d
+inmobi.com, 3a4f7da341dd490cbb7dde02b126275e, RESELLER, 83e75a7ae333ca9d
 inmobi.com, 61d733c3779d43e590c51c8bc078e10c, RESELLER, 83e75a7ae333ca9d
 kidoz.net, 19692013, RESELLER
 lemmatechnologies.com, 362, RESELLER, 7829010c5bebd1fb
@@ -54,9 +60,12 @@ pokkt.com, 7606, RESELLER, c45702d9311e25fd
 pubmatic.com, 156494, RESELLER, 5d62403b186f2ace
 pubmatic.com, 156520, RESELLER, 5d62403b186f2ace
 pubmatic.com, 157384, RESELLER, 5d62403b186f2ace
+Pubmatic.com, 157704, RESELLER, 5d62403b186f2ace
 pubmatic.com, 157800, RESELLER, 5d62403b186f2ace
 pubmatic.com, 158060, RESELLER, 5d62403b186f2ace
 pubmatic.com, 158118, RESELLER, 5d62403b186f2ace
+pubmatic.com, 158481, RESELLER, 5d62403b186f2ace
+pubmatic.com, 158565, RESELLER, 5d62403b186f2ace
 pubmatic.com, 159501, RESELLER, 5d62403b186f2ace
 pubmatic.com, 159906, RESELLER, 5d62403b186f2ace
 pubmatic.com, 160113, RESELLER, 5d62403b186f2ace
@@ -70,6 +79,7 @@ pubmatic.com, 161136, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161344, RESELLER, 5d62403b186f2ace
 Pubmatic.com, 161344, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161372, RESELLER, 5d62403b186f2ace
+pubmatic.com, 161853, RESELLER, 5d62403b186f2ace
 pubmatic.com, 162223, RESELLER, 5d62403b186f2ace
 pubnative.net, 1003601, RESELLER, d641df8625486a7b
 pubnative.net, 1006955, RESELLER, d641df8625486a7b
@@ -85,6 +95,7 @@ rubiconproject.com, 17608, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 18364, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 20014, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 20050, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 20086, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 20744, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 21526, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24362, RESELLER, 0bfd66d529a55807
@@ -112,6 +123,8 @@ webeyemob.com, 70104, RESELLER
 xandr.com, 13167, RESELLER, f5ab79cb980f11d1
 xandr.com, 13297, RESELLER, f5ab79cb980f11d1
 xandr.com, 7353, RESELLER, f5ab79cb980f11d1
+xandr.com, 8804, RESELLER, f5ab79cb980f11d1
+Xapads.com, 117219, RESELLER
 yandex.com, 40427798, RESELLER
 yandex.com, 95746987, RESELLER
 yandex.com, 97539269, RESELLER
