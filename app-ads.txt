@@ -27,6 +27,8 @@ bidmachine.io, 113, RESELLER
 bidmachine.io, 114, RESELLER
 bidmachine.io, 67, RESELLER
 contextweb.com, 562499, RESELLER, 89ff185a4c4e857c
+contextweb.com, 562842, RESELLER, 89ff185a4c4e857c
+contextweb.com, 562944, RESELLER, 89ff185a4c4e857c
 criteo.com, B-057601, RESELLER, 9fac4a4a87c2a44f
 criteo.com, B-057955, RESELLER, 9fac4a4a87c2a44f
 criteo.com, B-063105, RESELLER, 9fac4a4a87c2a44f
@@ -60,7 +62,6 @@ pokkt.com, 7606, RESELLER, c45702d9311e25fd
 pubmatic.com, 156494, RESELLER, 5d62403b186f2ace
 pubmatic.com, 156520, RESELLER, 5d62403b186f2ace
 pubmatic.com, 157384, RESELLER, 5d62403b186f2ace
-Pubmatic.com, 157704, RESELLER, 5d62403b186f2ace
 pubmatic.com, 157800, RESELLER, 5d62403b186f2ace
 pubmatic.com, 158060, RESELLER, 5d62403b186f2ace
 pubmatic.com, 158118, RESELLER, 5d62403b186f2ace
@@ -74,13 +75,12 @@ pubmatic.com, 160536, RESELLER, 5d62403b186f2ace
 pubmatic.com, 160846, RESELLER, 5d62403b186f2ace
 pubmatic.com, 160974, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161018, RESELLER, 5d62403b186f2ace
-Pubmatic.com, 161018, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161136, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161344, RESELLER, 5d62403b186f2ace
-Pubmatic.com, 161344, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161372, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161853, RESELLER, 5d62403b186f2ace
 pubmatic.com, 162223, RESELLER, 5d62403b186f2ace
+Pubmatic.com, 162882, RESELLER, 5d62403b186f2ace
 pubnative.net, 1003601, RESELLER, d641df8625486a7b
 pubnative.net, 1006955, RESELLER, d641df8625486a7b
 pubnative.net, 1007040, RESELLER, d641df8625486a7b
@@ -106,11 +106,10 @@ spotx.tv, 71426, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 117872, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 149886, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 71426, RESELLER, 7842df1d2fe2db34
-telaria.com, rwd19-1200549, RESELLER, 1a4e959a1b50034a
 thebrave.io, 1234594, RESELLER, c25b2154543746ac
+thebrave.io, 1234634, RESELLER, c25b2154543746ac
 thebrave.io, 9840732, RESELLER, c25b2154543746ac
 themediagrid.com, SWH94X, RESELLER, 35d5010d7789b49d
-tremorhub.com, rwd19-1200549, RESELLER, 1a4e959a1b50034a
 unity.com, 1200549, DIRECT, 96cabb5fbdde37a7
 velismedia.com, 1137, RESELLER
 velismedia.com, 725, RESELLER
