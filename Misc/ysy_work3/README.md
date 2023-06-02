@@ -230,7 +230,7 @@ x, y 위치에 해당하는 엔터티 리턴.
     로컬 스케일. xyz. 
 
     * localRot. RW. 
-    로컬 회전. ptich, yaw, roll. 
+    로컬 회전. yaw, ptich, roll. 
 
     * makeClone(). 
     현재 엔터티를 동일하게 복제. 
@@ -265,8 +265,8 @@ x, y 위치에 해당하는 엔터티 리턴.
     0xffffffff - 흰색, 0xff000000 - 검은색.
     알파채널은 효과물일 때만 동작. 
 
-    * goemetry_id. RW. 
-    지오메트리 아이디. 주의! 경계값은 바뀌지 않는다. 
+    * geometry_id. RW. 
+    지오메트리 아이디. 주의! 부모의 경계값은 바뀌지 않는다. 
 
     * blending. 미구현.
     효과물 노드일 때 동작.
