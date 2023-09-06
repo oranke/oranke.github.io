@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단 예제</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="js/load_wasm.js"></script>
+    <script src="js/Elements.js"></script>
+    <script src="main.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>간단 샘플</h2>
+
+        <div class="emscripten" style="width: 100%; height: 40vw;">
+            <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+            <div id="lbl-info" hidden>Infos</div>
+        </div>
+
+        <div id="lbl-info" hidden>Infos</div>
+    </div>
+    <hr>
+
+    <button id="btn_print_objects">씬 구조 콘솔에 출력</button>
+    <button id="btn_clear_scene">씬 내용물 모두 정리</button>
+    <br>
+
+    화면 드래그시 
+    <button id="btn_drag_rotate">씬 회전</button>
+    <button id="btn_drag_pan">씬 패닝</button>
+    <button id="btn_drag_pan_xz">씬 XZ평면 패닝</button>
+
+
+    <br>
+
+    <button id="btn_make_floor">바닥 만들기</button>
+    <button id="btn_make_fixt1">구조물 1 만들기</button>
+    <button id="btn_make_fixt2">구조물 2 만들기</button>
+    <button id="btn_move_fixt1">구조물 1 회전 후 이동</button>
+    <button id="btn_move_fixt2">구조물 2 회전 후 이동</button>
+
+    <br>
+
+    <button id="btn_make_wall">벽 만들기</button>
+    <button id="btn_test_wall">벽 테스트</button>
+    
+    <br>
+    <button id="btn_test_shelf">선반 테스트</button>
+    <button id="btn_test_shelf_add_box">선반에 상자 넣기</button>
+    <button id="btn_test_shelf_rem_box">선반에서 상자 제거</button>
+    <br>
+    <button id="btn_test_shelf2">선반2 테스트</button>
+    <button id="btn_test_shelf2_add_box">선반2에 상자 넣기</button>
+    <button id="btn_test_shelf2_rem_box">선반2에서 상자 제거</button>
+
+
+    <script>
+        let infoHideTimer = null;
+
+        function onBoxPointerDown(x, y, name) {
+            console.log(x, y, name);
+
+            $('#lbl-info').css({left: x, top: y});
+            //var scenePos = Module.getScenePos(select_fixtr.globalCenter);
+            //$('#lbl-info').css({left: scenePos.x, top: scenePos.y});
+            $('#lbl-info').text(name);
+            $('#lbl-info').show();
+
+            // 1초 후 사라지게. 
+            if (infoHideTimer) clearTimeout(infoHideTimer);
+            infoHideTimer = setTimeout(function(name) {
+                //if ($('#lbl-info').text() == name)
+                $('#lbl-info').hide();
+
+                infoHideTimer = null; 
+            }, 1000, name)
+
+        }
+
+
+        let bkwViewer = undefined; 
+
+        window.onload = function() {
+            //console.log('hahah')
+            bkwViewer = new BkwViewerClass(document.getElementById('canvas'), 'BkwViewer');
+            bkwViewer.boxPointerDownFunc = onBoxPointerDown; 
+            console.log('박스클릭함수 설정', bkwViewer.boxPointerDownFunc)
+
+
+            $('#btn_print_objects').click(function(){
+                bkwViewer.printScene();
+            });
+
+            $('#btn_clear_scene').click(function(){
+                bkwViewer.clearScene();
+            });
+
+            $('#btn_drag_rotate').click(function(){
+                bkwViewer.dragOperate = 'rotate';
+            });
+
+            $('#btn_drag_pan').click(function(){
+                bkwViewer.dragOperate = 'pan';
+            });
+            $('#btn_drag_pan_xz').click(function(){
+                bkwViewer.dragOperate = 'pan_xz';
+            });
+            
+            
+            
+
+            $('#btn_make_floor').click(function(){
+                bkwViewer.makeFloor(25, 25);
+            });
+
+            $('#btn_make_fixt1').click(function(){
+                bkwViewer.makeTestFixt_1(5, 5, -10);
+            });
+            
+            $('#btn_make_fixt2').click(function(){
+                bkwViewer.makeTestFixt_2(5, 9, 10);
+            });
+
+            $('#btn_move_fixt1').click(function() {
+                bkwViewer.moveTestFixt_1(); 
+            });
+
+            $('#btn_move_fixt2').click(function() {
+                bkwViewer.moveTestFixt_2(); 
+            });
+
+            $('#btn_make_wall').click(function() {
+                bkwViewer.makeWall();
+            });
+
+            $('#btn_test_wall').click(function() {
+                bkwViewer.testWall();
+            })
+
+            $('#btn_test_shelf').click(function() {
+                bkwViewer.testShelf();
+            })
+
+            $('#btn_test_shelf_add_box').click(function() {
+                bkwViewer.testShelf_addBox(bkwViewer.shelf);
+            })
+            
+            $('#btn_test_shelf_rem_box').click(function() {
+                bkwViewer.testShelf_remBox(bkwViewer.shelf);
+            })
+
+            $('#btn_test_shelf2').click(function() {
+                bkwViewer.testShelf2();
+            })
+
+            $('#btn_test_shelf2_add_box').click(function() {
+                bkwViewer.testShelf_addBox(bkwViewer.shelf2);
+            })
+            
+            $('#btn_test_shelf2_rem_box').click(function() {
+                bkwViewer.testShelf_remBox(bkwViewer.shelf2);
+            })
+
+        }
+    </script>
+    
+</body>
+</html>
