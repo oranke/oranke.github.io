@@ -180,7 +180,7 @@
             $('#sect_box').hide();
             $('#complex_box').hide();
 
-            var url = window.location.origin + '/datas/' + cityNo + '.json';
+            var url = 'datas/' + cityNo + '.json';
             $.get(url).then(function (res) {
                 
                 //console.log(res); 
@@ -201,7 +201,7 @@
             //$('#sect_box').hide();
             $('#complex_box').hide();
 
-            var url = window.location.origin + '/datas/' + dvsnNo + '.json';
+            var url = 'datas/' + dvsnNo + '.json';
             $.get(url).then(function (res) {
                 
                 //console.log(res); 
@@ -221,7 +221,7 @@
             //console.log(sectNo); 
             //$('#complex_box').hide();
 
-            var url = window.location.origin + '/datas/' + sectNo + '.json';
+            var url = 'datas/' + sectNo + '.json';
             $.get(url).then(function (res) {
                 
                 //console.log(res); 
