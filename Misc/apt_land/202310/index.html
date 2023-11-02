@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>지역별 매물 가격 비교표</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
+  </head>
+  <body>
+    <style>
+        .table-condensed {
+            width: 90%;
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5f5fe6ef;
+        }
+    </style>
+
+    <div class="px-4 py-4 my-0 text-left">
+        <h4>
+            지역별 매물 가격 비교표
+        </h4>
+        <br>
+        <h6>
+            <p>수집기간: 2023.10.25 ~ 2023.10.28 </p>
+            <p>표시조건: 매물 또는 최근 6개월간 실거래가 있는 단지</p>
+        </h6>
+    </div>
+
+    <div class="px-4 py-4 my-0 text-left">
+        <p><b><div id="city_title">도, 특별시, 광역시</div></b></p>
+        <table
+            id="city_table"
+            data-toggle="table"
+            data-url="datas/0000000000.json"
+            class="table-condensed"
+        >
+            <thead>
+                <tr class="tr-class-2">
+                    <th data-field="cnm" data-sortable="true">이름</th>
+                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
+                    <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
+                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
+                    <th data-field="callCount" data-sortable="true">매물 수</th>
+                    <th data-field="realCount" data-sortable="true">실거래 수</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="dvsn_box" class="px-4 py-4 my-0 text-left" style="display:none">
+        <div id="dvsn_title">
+            <p><b>
+                테스트 구군 (<a href="#city_title">위로</a>)
+            </b></p>
+        </div>
+        <table
+            id="dvsn_table"
+            class="table-condensed"
+        >
+            <thead>
+                <tr>
+                    <th data-field="dnm" data-sortable="true">이름</th>
+                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
+                    <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
+                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
+                    <th data-field="callCount" data-sortable="true">매물 수</th>
+                    <th data-field="realCount" data-sortable="true">실거래 수</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    
+    <div id="sect_box" class="px-4 py-4 my-0 text-left" style="display:none">
+        <div id="sect_title">
+            <p><b>
+                테스트 면동 (<a href="#dvsn_title">위로</a>)
+            </b></p>
+        </div>
+        <table
+            id="sect_table"
+            class="table-condensed"
+        >
+            <thead>
+                <tr>
+                    <th data-field="snm" data-sortable="true">이름</th>
+                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
+                    <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
+                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
+                    <th data-field="callCount" data-sortable="true">매물 수</th>
+                    <th data-field="realCount" data-sortable="true">실거래 수</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="complex_box" class="px-4 py-4 my-0 text-left" style="display:none">
+        <div id="complex_title">
+            <p><b>
+                테스트 단지 (<a href="#sect_title">위로</a>)
+            </b></p>
+        </div>
+        <table
+            id="complex_table"
+            class="table-condensed"            
+
+        >
+            <thead>
+                <tr>
+                    <th data-field="hnm" data-sortable="true" data-formatter="getComplexLink">이름</th>
+                    <th data-field="typeNm" data-sortable="true">구분</th>
+                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
+                    <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
+                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
+                    <th data-field="callCount" data-sortable="true">매물 수</th>
+                    <th data-field="realCount" data-sortable="true">실거래 수</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+
+    <script>
+        function ajaxRequest(params) {
+            console.log($.param(params.data));
+            var url = 'https://examples.wenzhixin.net.cn/examples/bootstrap_table/data';
+            $.get(url + '?' + $.param(params.data)).then(function (res) {
+                params.success(res)
+            })
+        }
+
+        $('#table').on('click-row.bs.table', function (row, element, field, d) {
+            console.log('row', row);
+            console.log('element', element); 
+            console.log('field', field); 
+            console.log(d);
+        // ...
+        })
+
+        //$('#table').on('click-cell.bs.table')
+
+
+
+    </script>
+
+    <script>
+        $('#city_table').on('click-row.bs.table', function (row, element, field) {
+            setDvsn(element.cno, element.cnm)
+        })
+
+        $('#dvsn_table').on('click-row.bs.table', function (row, element, field) {
+            setSect(element.dno, element.dnm)
+        })
+
+        $('#sect_table').on('click-row.bs.table', function (row, element, field) {
+            setComplex(element.sno, element.snm)
+        })
+
+        function setDvsn(cityNo, cityNm) {
+            //$('#dvsn_box').hide();
+            $('#sect_box').hide();
+            $('#complex_box').hide();
+
+            var url = window.location.origin + '/datas/' + cityNo + '.json';
+            $.get(url).then(function (res) {
+                
+                //console.log(res); 
+                $('#dvsn_box').show();
+                //$('#sect_box').hide();
+                //$('#complex_box').hide();
+
+                $('#dvsn_title').html(`<p><b>${cityNm} (<a href="#city_title">위로</a>)</p></b>`);
+                $('#dvsn_table').bootstrapTable('destroy');
+                $('#dvsn_table').bootstrapTable({data: res})
+
+
+                document.getElementById("dvsn_title").scrollIntoView();
+            })
+        }
+
+        function setSect(dvsnNo, dvsnNm) {
+            //$('#sect_box').hide();
+            $('#complex_box').hide();
+
+            var url = window.location.origin + '/datas/' + dvsnNo + '.json';
+            $.get(url).then(function (res) {
+                
+                //console.log(res); 
+                $('#sect_box').show();
+                //$('#complex_box').hide();
+
+                $('#sect_title').html(`<p><b>${dvsnNm} (<a href="#dvsn_title">위로</a>)</p></b>`);
+                $('#sect_table').bootstrapTable('destroy');
+                $('#sect_table').bootstrapTable({data: res})
+
+
+                document.getElementById("sect_title").scrollIntoView();
+            })
+        }
+
+        function setComplex(sectNo, sectNm) {
+            //console.log(sectNo); 
+            //$('#complex_box').hide();
+
+            var url = window.location.origin + '/datas/' + sectNo + '.json';
+            $.get(url).then(function (res) {
+                
+                //console.log(res); 
+                $('#complex_box').show();
+
+                $('#complex_title').html(`<p><b>${sectNm} (<a href="#sect_title">위로</a>)</p></b>`);
+                $('#complex_table').bootstrapTable('destroy');
+                $('#complex_table').bootstrapTable({data: res})
+
+
+                document.getElementById("complex_title").scrollIntoView();
+            })
+        }
+
+        function getComplexLink(value, row, index, field) {
+            /*
+            console.log('value', value)
+            console.log('row', row)
+            console.log('index', index)
+            console.log('field', field)
+            */
+            return `<a href="https://new.land.naver.com/complexes/${row.hno}" target="_naverLand">${row.hnm}</a>`;
+        }
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
